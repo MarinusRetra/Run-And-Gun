@@ -6,6 +6,7 @@ public class PlayerControl : MonoBehaviour
     public PlayerController Controller;
     Rigidbody2D rb;
     bool IsGrounded = false;
+    float JumpBufferTimer = 0.1f;
     float JumpBuffer = 0f;
 
     private void Start()
@@ -14,13 +15,14 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
-
+        //link en rechts movement
         rb.velocity = new Vector2(Controller.ReturnMovementInput() * Controller.MoveSpeed, rb.velocity.y);
-        if (Controller.ReturnJumpInput() && IsGrounded)
+        
+        //kan alleen springen als je op de grond staat
+        if (JumpBuffer > 0 && IsGrounded)
         {
             Jump();
         }
-
 
         // verlaagt de velocity als je jump loslaat
         if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
@@ -28,19 +30,17 @@ public class PlayerControl : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
         }
 
-
-        if (Controller.ReturnJumpInput() && !IsGrounded)
+        //jump buffer
+        if (Controller.ReturnJumpInput())
         {
-            JumpBuffer = 0.2f;
+            JumpBuffer = JumpBufferTimer;
         }
         else
         { 
             JumpBuffer -= Time.deltaTime;
         }
-        if (JumpBuffer > 0 && IsGrounded)
-        {
-            Jump();
-        }
+
+
 
     }
 
@@ -51,9 +51,9 @@ public class PlayerControl : MonoBehaviour
             IsGrounded = true;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
             IsGrounded = false;
         }
@@ -64,7 +64,7 @@ public class PlayerControl : MonoBehaviour
     /// </summary>
     void Jump()
     {
-        JumpBuffer = -1;
+        IsGrounded = false;
         //wordt gestopt zodat je jump niet meer aangeroepen wordt na het springen
         Debug.Log("Jump");
         rb.velocity = new Vector2(rb.velocity.x, Controller.JumpForce);
