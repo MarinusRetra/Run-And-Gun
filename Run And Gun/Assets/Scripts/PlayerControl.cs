@@ -14,20 +14,28 @@ public class PlayerControl : MonoBehaviour
     }
     void Update()
     {
-        JumpBuffer -= Time.deltaTime;
 
         rb.velocity = new Vector2(Controller.ReturnMovementInput() * Controller.MoveSpeed, rb.velocity.y);
         if (Controller.ReturnJumpInput() && IsGrounded)
         {
             Jump();
         }
-        if(Input.GetButtonUp("Jump") && rb.velocity.y > 0) 
+
+
+        // verlaagt de velocity als je jump loslaat
+        if(Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * .5f);
         }
+
+
         if (Controller.ReturnJumpInput() && !IsGrounded)
         {
-            JumpBuffer = 0.3f;
+            JumpBuffer = 0.2f;
+        }
+        else
+        { 
+            JumpBuffer -= Time.deltaTime;
         }
         if (JumpBuffer > 0 && IsGrounded)
         {
