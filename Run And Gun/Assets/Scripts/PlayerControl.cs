@@ -6,12 +6,16 @@ public class PlayerControl : MonoBehaviour
     public PlayerController Controller;
     Rigidbody2D rb;
     bool IsGrounded = false;
+    float JumpBuffer = 0f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
     void Update()
     {
+        JumpBuffer -= Time.deltaTime;
+
         rb.velocity = new Vector2(Controller.ReturnMovementInput() * Controller.MoveSpeed, rb.velocity.y);
         if (Controller.ReturnJumpInput() && IsGrounded)
         {
@@ -23,8 +27,13 @@ public class PlayerControl : MonoBehaviour
         }
         if (Controller.ReturnJumpInput() && !IsGrounded)
         {
-            StartCoroutine(RememberJumpInput());
+            JumpBuffer = 0.3f;
         }
+        if (JumpBuffer > 0 && IsGrounded)
+        {
+            Jump();
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -47,27 +56,9 @@ public class PlayerControl : MonoBehaviour
     /// </summary>
     void Jump()
     {
+        JumpBuffer = -1;
         //wordt gestopt zodat je jump niet meer aangeroepen wordt na het springen
         Debug.Log("Jump");
         rb.velocity = new Vector2(rb.velocity.x, Controller.JumpForce);
     }
-
-    /// <summary>
-    /// Zorgt ervoor dat je meteen springt wanneer je de grond raakt als je vlak ervoor op de spring knop drukte
-    /// </summary>
-    /// <returns></returns>
-    IEnumerator RememberJumpInput()
-    {
-        // ik check 4 keer in een for loop inplaats van 1 check met een 0.2 seconden voor een iets soepelere sprong
-        for (int i = 0; i < 4; i++)
-        {
-          yield return new WaitForSeconds(0.05f);
-          if (IsGrounded)
-          { 
-            Jump(); 
-            StopCoroutine(RememberJumpInput());
-          }
-        }
-    }
-
 }
