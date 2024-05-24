@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     bool IsGrounded = false;
     float JumpBufferTimer = 0.1f;
     float JumpBuffer = 0f;
+    
 
     private void Start()
     {
@@ -39,15 +40,19 @@ public class PlayerControl : MonoBehaviour
         { 
             JumpBuffer -= Time.deltaTime;
         }
-
-
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
         { 
+            IsGrounded = true;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") && JumpBuffer > 0)
+        {
             IsGrounded = true;
         }
     }
