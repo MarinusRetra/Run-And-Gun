@@ -1800,6 +1800,8 @@ GameObject:
   - component: {fileID: 313189371}
   - component: {fileID: 313189372}
   - component: {fileID: 313189373}
+  - component: {fileID: 313189375}
+  - component: {fileID: 313189374}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -1887,6 +1889,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CrossAir: {fileID: 2800000, guid: 33013fc50a5b93f499980651e991fa35, type: 3}
+--- !u!114 &313189374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313189370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f70957619006c24185d24e33da54891, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &313189375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313189370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e691fd5578484749a7d7df139b532fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weaponIn: {fileID: 11400000, guid: 72eda07efed3e9c46a282a0c5dbeaa29, type: 2}
+  bullet: {fileID: 0}
 --- !u!1 &336136222
 GameObject:
   m_ObjectHideFlags: 0
@@ -2165,7 +2193,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Controller: {fileID: 11400000, guid: a8ef83d1e85e2bb4591c143d265b86fa, type: 2}
-  Gravity: -9.81
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

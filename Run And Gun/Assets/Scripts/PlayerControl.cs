@@ -7,9 +7,7 @@ public class PlayerControl : MonoBehaviour
     bool IsGrounded = false;
     float JumpBufferTimer = 0.1f;
     float JumpBuffer = 0f;
-    public float Gravity = -9.81f;
     
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -64,14 +62,9 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Springt en stopt RememberJumpInput coroutine
-    /// </summary>
-    void Jump()
+    void Jump()// kan later naar inputController moeten verplaatsen
     {
         IsGrounded = false;
-        //wordt gestopt zodat je jump niet meer aangeroepen wordt na het springen
-        Debug.Log("Jump");
         rb.velocity = new Vector2(rb.velocity.x, Controller.JumpForce);
     }
 }
