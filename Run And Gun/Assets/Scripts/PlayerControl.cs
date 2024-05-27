@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
@@ -8,6 +7,7 @@ public class PlayerControl : MonoBehaviour
     bool IsGrounded = false;
     float JumpBufferTimer = 0.1f;
     float JumpBuffer = 0f;
+    public float Gravity = -9.81f;
     
 
     private void Start()
