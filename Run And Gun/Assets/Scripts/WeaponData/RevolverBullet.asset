@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
-  m_Name: Revolver
+  m_Script: {fileID: 11500000, guid: 1915477dc395d4342a9d464f152ed46f, type: 3}
+  m_Name: RevolverBullet
   m_EditorClassIdentifier: 
-  bullet: {fileID: 0}
-  ProjectileCount: 1
-  Damage: 50
-  WeaponName: Revolver
-  WeaponSprite: {fileID: 0}
-  ProjectileLifeTime: 1
-  MaxAmmoCount: 120
-  MagazineCount: 6
+  Damage: 20
+  LifeTime: 0.2

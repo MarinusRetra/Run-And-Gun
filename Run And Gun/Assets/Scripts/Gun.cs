@@ -1,31 +1,58 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    public WeaponScriptable weaponIn;
-    [SerializeField] Projectile bullet;
-
-    void Start()
-    {
-        bullet = weaponIn.bullet;
-    }
-
+    public Transform FirePoint;
+    public WeaponScriptable[] weaponIn;
+    public GameObject Projectile;
+    int CurrentWeapon = 0;
     void Update()
     {
-        TryShoot();
+        CheckShoot();
+        ReadSwapInput();
     }
 
-    public void TryShoot()
+    void ReadSwapInput()
     {
-        if (Input.GetMouseButtonDown(0) && weaponIn.AmmoInMagazine > 0)
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            weaponIn.Shoot();
+            SwapWeapon(0);
         }
-        else if (Input.GetMouseButtonDown(0) && weaponIn.AmmoInMagazine == 0)
-        { 
-            weaponIn.Reload();
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            SwapWeapon(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            SwapWeapon(2);
+        }
+    }
+
+    void SwapWeapon(int weaponIn)
+    { 
+      CurrentWeapon = weaponIn;
+      Projectile.GetComponent<Projectile>().SetBullet(CurrentWeapon);
+    }
+
+    void CheckShoot()
+    {
+        if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoInMagazine > 0)
+        {
+            for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
+            { 
+                weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint);
+                Debug.Log(weaponIn[CurrentWeapon]);
+                // verander de positie van elke kogel voor een bullet spread effect
+            }
+        }
+        else if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoInMagazine == 0)
+        {
+            weaponIn[CurrentWeapon].Reload();
+        }
+        else if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoCount == 0)
+        {
+            Debug.Log("Empty Gun");
         }
     }
 }

@@ -1,29 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    WeaponScriptable Gun;
-    private float lifeTime;
-    private int damage;
+    public Bullet[] Bullet;
+    private int currentBullet = 0;
 
-    private void Awake()
+    public void SetBullet(int bulletIn)
     {
-        Gun = GetComponent<Gun>().weaponIn;
-        SetBullet();
+        currentBullet = bulletIn;
     }
+
 
     private void OnCollisionEnter(Collision collision)
     {
-      //  collision.TakeDamage(damage);
-    }
-
-    public void SetBullet()
-    { 
-        damage = Gun.Damage;
-        lifeTime = Gun.ProjectileLifeTime;
-        Gun.bullet = this;
+        Debug.Log("Bullet hit");
+        // collision.TakeDamage(Bullet[currentBullet].Damage);
     }
 
 }

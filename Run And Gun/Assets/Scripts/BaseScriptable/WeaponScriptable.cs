@@ -3,48 +3,42 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Weapon")]
 public class WeaponScriptable : ScriptableObject
 {
-    [HideInInspector] public Projectile bullet;
     public int ProjectileCount;
-    public int Damage;
     public string WeaponName;
     public Sprite WeaponSprite;
-    public float ProjectileLifeTime;
     public int MaxAmmoCount;
     public int AmmoCount { get; private set; }
-    public int AmmoInMagazine { get; private set; }  
+    public int AmmoInMagazine { get; private set; }
     public int MagazineCount;
 
-    public WeaponScriptable(int projectileCountIn, int damageIn, string nameIn, Sprite spriteIn, float lifetimeIn, int maxAmmoCountIn, int magazineCountIn  )
-    { 
+    public WeaponScriptable(int projectileCountIn, string nameIn, Sprite spriteIn, int maxAmmoCountIn, int magazineCountIn)
+    {
         ProjectileCount = projectileCountIn;
-        Damage = damageIn;
         WeaponName = nameIn;
         WeaponSprite = spriteIn;
-        ProjectileLifeTime = lifetimeIn;
         MaxAmmoCount = maxAmmoCountIn;
         MagazineCount = magazineCountIn;
         AmmoCount = MaxAmmoCount;
         AmmoInMagazine = MagazineCount;
     }
 
-    public void Shoot()
+    public void Shoot(GameObject projectileIn, Transform FirePoint)
     {
-        Instantiate(bullet);
-        bullet.GetComponent<Rigidbody2D>().AddForce(bullet.transform.forward);
-        if (AmmoInMagazine > 0)
-        { 
-            AmmoCount--;
-        }
+        GameObject Projectile = Instantiate(projectileIn, FirePoint.position, FirePoint.rotation);
+        Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
+        rb.AddForce(FirePoint.forward * 30, ForceMode2D.Impulse);
+        AmmoInMagazine--;
     }
+
     public void Reload()
     {
-        AmmoInMagazine = MagazineCount;
         AmmoCount -= MagazineCount;
+        AmmoInMagazine = MagazineCount;
     }
 
     public override string ToString()
     {
-        return WeaponName;
+        return $"{WeaponName} Ammo: {AmmoCount}";
     }
-}
 
+}
