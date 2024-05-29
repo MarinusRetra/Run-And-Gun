@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Revolver
   m_EditorClassIdentifier: 
   ProjectileCount: 1
+  ReloadTime: 1
   WeaponName: Revolver
   WeaponSprite: {fileID: 0}
   MaxAmmoCount: 120
+  AmmoCount: 120
+  AmmoInMagazine: 0
   MagazineCount: 6
+  blockShoot: 0
