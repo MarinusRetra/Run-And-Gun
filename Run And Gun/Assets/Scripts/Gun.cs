@@ -16,6 +16,7 @@ public class Gun : MonoBehaviour
         {
             weaponIn[i].AmmoCount = weaponIn[i].MaxAmmoCount;
             weaponIn[i].AmmoInMagazine = weaponIn[i].MagazineCount;
+            weaponIn[i].blockShoot = false;
         }
     }
     void Update()

@@ -12,7 +12,7 @@ public class WeaponScriptable : ScriptableObject
     public int AmmoCount;
     public int AmmoInMagazine;
     public int MagazineCount;
-    [HideInInspector] public bool blockShoot = false;
+    public bool blockShoot = false;
     
     //public WeaponScriptable(int projectileCountIn, string nameIn, Sprite spriteIn, int maxAmmoCountIn, int magazineCountIn)
     //{
