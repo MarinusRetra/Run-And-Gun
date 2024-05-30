@@ -1819,7 +1819,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.006, y: 0.002, z: 0}
-  m_LocalScale: {x: 0.1208, y: 0.89532876, z: 1}
+  m_LocalScale: {x: 4, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1162412835}
@@ -1866,7 +1866,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e8cf4cd5a74bda04f99102d9f96a9d86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1904,6 +1904,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bullet:
   - {fileID: 11400000, guid: 5bc8abda86a29a74c9ff074c37206ab0, type: 2}
+  - {fileID: 11400000, guid: df9048d9c7ee876469c749d34ec61aa3, type: 2}
+  - {fileID: 11400000, guid: 9a53a97cc4d72224c8f74055a5f18c03, type: 2}
 --- !u!114 &313189375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,6 +1921,8 @@ MonoBehaviour:
   FirePoint: {fileID: 1162412835}
   weaponIn:
   - {fileID: 11400000, guid: 72eda07efed3e9c46a282a0c5dbeaa29, type: 2}
+  - {fileID: 11400000, guid: 53eab69d02e5402458e143f9f1e80082, type: 2}
+  - {fileID: 11400000, guid: 8e2c7296a3f16764aa4bb0ae9dbf5ab0, type: 2}
   Projectile: {fileID: 7181512274810957105, guid: 9e768efd989ebec4399fedfdf4f0c6c1, type: 3}
 --- !u!1 &336136222
 GameObject:

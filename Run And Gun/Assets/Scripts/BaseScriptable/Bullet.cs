@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu (fileName = "Projectile", menuName ="Projectile")]
+[CreateAssetMenu (fileName = "Bullet", menuName = "Weapons/Bullet")]
 public class Bullet : ScriptableObject
 {
     public int Damage;

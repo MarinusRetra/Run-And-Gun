@@ -47,22 +47,23 @@ public class Gun : MonoBehaviour
     /// </summary>
     /// <param name="weaponIn"></param>
     void SwapWeapon(int weaponIn)
-    { 
-      CurrentWeapon = weaponIn;
-      Projectile.GetComponent<Projectile>().SetBullet(CurrentWeapon);
+    {
+            CurrentWeapon = weaponIn;
+            Projectile.GetComponent<Projectile>().SetBullet(CurrentWeapon);
     }
 
     /// <summary>
     /// Zet de blockShoot variable van het huidige wapen en reload vervolgens het wapen
     /// </summary>
     /// <returns></returns>
-    public IEnumerator ReloadRoutine()
+    public IEnumerator ReloadRoutine(int currentWeapon)
     {
-        weaponIn[CurrentWeapon].blockShoot = true;
-        yield return new WaitForSeconds(weaponIn[CurrentWeapon].ReloadTime);
-        weaponIn[CurrentWeapon].blockShoot = false;
-        weaponIn[CurrentWeapon].Reload();
-        StopCoroutine(ReloadRoutine());
+        weaponIn[currentWeapon].blockShoot = true;
+        yield return new WaitForSeconds(weaponIn[currentWeapon].ReloadTime);
+        weaponIn[currentWeapon].blockShoot = false;
+        weaponIn[currentWeapon].Reload();
+        Debug.Log(weaponIn[currentWeapon]);
+        //StopCoroutine(ReloadRoutine(currentWeapon));
     }
     /// <summary>
     /// Checkt of je kan schieten zo, ja Schiet, zo niet als alleen je magazijn leeg is reload, ammo count en magazijn is leeg, Return leeg wapen
@@ -95,7 +96,7 @@ public class Gun : MonoBehaviour
         {
             if (!weaponIn[CurrentWeapon].blockShoot)
             {
-                StartCoroutine(ReloadRoutine());
+                StartCoroutine(ReloadRoutine(CurrentWeapon));
             }
             else
             {

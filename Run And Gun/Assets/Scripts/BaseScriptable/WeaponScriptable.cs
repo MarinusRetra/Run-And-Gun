@@ -3,6 +3,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Weapon")]
 public class WeaponScriptable : ScriptableObject
 {
+    public int ProjectileVelocity;
     public int ProjectileCount;
     public float ReloadTime;
     public string WeaponName;
@@ -12,16 +13,18 @@ public class WeaponScriptable : ScriptableObject
     public int AmmoInMagazine;
     public int MagazineCount;
     [HideInInspector] public bool blockShoot = false;
-    public WeaponScriptable(int projectileCountIn, string nameIn, Sprite spriteIn, int maxAmmoCountIn, int magazineCountIn)
-    {
-        ProjectileCount = projectileCountIn;
-        WeaponName = nameIn;
-        WeaponSprite = spriteIn;
-        MaxAmmoCount = maxAmmoCountIn;
-        MagazineCount = magazineCountIn;
-        AmmoCount = MaxAmmoCount;
-        AmmoInMagazine = MagazineCount;
-    }
+    
+    //public WeaponScriptable(int projectileCountIn, string nameIn, Sprite spriteIn, int maxAmmoCountIn, int magazineCountIn)
+    //{
+    //    ProjectileCount = projectileCountIn;
+    //    WeaponName = nameIn;
+    //    WeaponSprite = spriteIn;
+    //    MaxAmmoCount = maxAmmoCountIn;
+    //    MagazineCount = magazineCountIn;
+    //    AmmoCount = MaxAmmoCount;
+    //    AmmoInMagazine = MagazineCount;
+    //}
+
     /// <summary>
     /// Instantiate een kogel op de Gegeven Firepoint
     /// </summary>
@@ -33,7 +36,7 @@ public class WeaponScriptable : ScriptableObject
         { 
             GameObject Projectile = Instantiate(projectileIn, FirePoint.position, FirePoint.rotation);
             Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
-            rb.AddForce(FirePoint.forward * 30, ForceMode2D.Impulse);
+            rb.AddForce(FirePoint.forward * ProjectileVelocity, ForceMode2D.Impulse);
             AmmoInMagazine--;
         }
     }

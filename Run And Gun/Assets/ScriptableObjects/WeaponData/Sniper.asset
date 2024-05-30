@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
-  m_Name: Revolver
+  m_Name: Sniper
   m_EditorClassIdentifier: 
-  ProjectileVelocity: 30
+  ProjectileVelocity: 120
   ProjectileCount: 1
   ReloadTime: 1
-  WeaponName: Revolver
+  WeaponName: Sniper
   WeaponSprite: {fileID: 0}
-  MaxAmmoCount: 60
-  AmmoCount: 54
-  AmmoInMagazine: 5
-  MagazineCount: 6
+  MaxAmmoCount: 20
+  AmmoCount: 0
+  AmmoInMagazine: 0
+  MagazineCount: 1
   blockShoot: 0
