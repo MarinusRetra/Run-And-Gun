@@ -1,20 +1,22 @@
+using System.Collections;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public Bullet[] Bullet;
-    private int currentBullet = 0;
-
-    public void SetBullet(int bulletIn)
-    {
-        currentBullet = bulletIn;
-    }
-
-
+    [HideInInspector] public float BulletLifeTime;
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("Bullet hit");
-        // collision.TakeDamage(Bullet[currentBullet].Damage);
+        //collision.TakeDamage(Bullet[currentBullet].Damage);
+    }
+    private void Start()
+    {
+        StartCoroutine(KillBullet());
     }
 
+    IEnumerator KillBullet()
+    { 
+      yield return new WaitForSeconds(BulletLifeTime);
+      Destroy(gameObject);
+    }
 }

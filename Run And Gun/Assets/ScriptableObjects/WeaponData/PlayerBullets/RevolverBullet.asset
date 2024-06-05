@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: RevolverBullet
   m_EditorClassIdentifier: 
   Damage: 20
-  LifeTime: 0.2
+  LifeTime: 2

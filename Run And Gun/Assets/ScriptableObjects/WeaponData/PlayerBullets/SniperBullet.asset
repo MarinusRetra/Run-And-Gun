@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: SniperBullet
   m_EditorClassIdentifier: 
   Damage: 150
-  LifeTime: 1
+  LifeTime: 2

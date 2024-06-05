@@ -18,7 +18,7 @@ MonoBehaviour:
   WeaponName: Sniper
   WeaponSprite: {fileID: 0}
   MaxAmmoCount: 20
-  AmmoCount: 0
-  AmmoInMagazine: 0
+  AmmoCount: 16
+  AmmoInMagazine: 1
   MagazineCount: 1
   blockShoot: 0

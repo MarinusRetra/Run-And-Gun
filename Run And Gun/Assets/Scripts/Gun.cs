@@ -6,8 +6,10 @@ public class Gun : MonoBehaviour
     public Transform FirePoint;
     public WeaponScriptable[] weaponIn;
     public GameObject Projectile;
-    int CurrentWeapon = 0;
+    public Bullet[] Bullet;
+    private int currentBullet = 0;
 
+    int CurrentWeapon = 0;
     private void Start()
     {
         //zet de AmmoCount naar MaxAmmoCount van het i en doet hetzelfde met AmmoInMagazine
@@ -50,7 +52,16 @@ public class Gun : MonoBehaviour
     void SwapWeapon(int weaponIn)
     {
             CurrentWeapon = weaponIn;
-            Projectile.GetComponent<Projectile>().SetBullet(CurrentWeapon);
+            SetBullet(CurrentWeapon);
+    }
+
+    /// <summary>
+    /// Wisselt De kogel die geschoten wordt, niet het wapen
+    /// </summary>
+    /// <param name="bulletIn"></param>
+    public void SetBullet(int bulletIn)
+    {
+        currentBullet = bulletIn;
     }
 
     /// <summary>
@@ -76,9 +87,7 @@ public class Gun : MonoBehaviour
         {
             for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
             {
-                weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint);
-                Debug.Log(weaponIn[CurrentWeapon]);
-                // TO-DO verander de positie van elke kogel voor een bullet spread effect
+                weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint, Bullet[currentBullet].LifeTime);
             }
         }
         // als je magazijn leeg is en je totale ammo 0 is dan gaat dit af

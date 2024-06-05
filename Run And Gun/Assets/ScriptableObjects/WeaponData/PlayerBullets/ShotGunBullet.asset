@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ShotGunBullet
   m_EditorClassIdentifier: 
   Damage: 5
-  LifeTime: 0.2
+  LifeTime: 2

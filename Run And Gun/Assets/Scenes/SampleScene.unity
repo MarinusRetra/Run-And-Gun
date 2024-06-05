@@ -1801,7 +1801,6 @@ GameObject:
   - component: {fileID: 313189372}
   - component: {fileID: 313189373}
   - component: {fileID: 313189375}
-  - component: {fileID: 313189374}
   m_Layer: 0
   m_Name: Weapon
   m_TagString: Untagged
@@ -1890,22 +1889,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CrossAir: {fileID: 2800000, guid: 33013fc50a5b93f499980651e991fa35, type: 3}
---- !u!114 &313189374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313189370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f70957619006c24185d24e33da54891, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Bullet:
-  - {fileID: 11400000, guid: 5bc8abda86a29a74c9ff074c37206ab0, type: 2}
-  - {fileID: 11400000, guid: df9048d9c7ee876469c749d34ec61aa3, type: 2}
-  - {fileID: 11400000, guid: 9a53a97cc4d72224c8f74055a5f18c03, type: 2}
 --- !u!114 &313189375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1924,6 +1907,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 53eab69d02e5402458e143f9f1e80082, type: 2}
   - {fileID: 11400000, guid: 8e2c7296a3f16764aa4bb0ae9dbf5ab0, type: 2}
   Projectile: {fileID: 7181512274810957105, guid: 9e768efd989ebec4399fedfdf4f0c6c1, type: 3}
+  Bullet:
+  - {fileID: 11400000, guid: 5bc8abda86a29a74c9ff074c37206ab0, type: 2}
+  - {fileID: 11400000, guid: df9048d9c7ee876469c749d34ec61aa3, type: 2}
+  - {fileID: 11400000, guid: 9a53a97cc4d72224c8f74055a5f18c03, type: 2}
 --- !u!1 &336136222
 GameObject:
   m_ObjectHideFlags: 0
