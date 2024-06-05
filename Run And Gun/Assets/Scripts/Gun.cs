@@ -87,7 +87,8 @@ public class Gun : MonoBehaviour
         {
             for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
             {
-                weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint, Bullet[currentBullet].LifeTime);
+                weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint, Bullet[currentBullet].LifeTime, CurrentWeapon);
+
             }
         }
         // als je magazijn leeg is en je totale ammo 0 is dan gaat dit af

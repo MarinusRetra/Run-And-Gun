@@ -1,12 +1,14 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     [HideInInspector] public float BulletLifeTime;
-    private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Bullet hit");
+        Destroy(gameObject);
         //collision.TakeDamage(Bullet[currentBullet].Damage);
     }
     private void Start()
@@ -19,4 +21,6 @@ public class Projectile : MonoBehaviour
       yield return new WaitForSeconds(BulletLifeTime);
       Destroy(gameObject);
     }
+
+    
 }

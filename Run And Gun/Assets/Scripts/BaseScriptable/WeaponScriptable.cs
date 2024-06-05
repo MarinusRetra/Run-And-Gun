@@ -19,14 +19,24 @@ public class WeaponScriptable : ScriptableObject
     /// </summary>
     /// <param name="projectileIn"></param>
     /// <param name="FirePoint"></param>
-    public void Shoot(GameObject projectileIn, Transform FirePoint, float LifeTimeIn)
+    public void Shoot(GameObject projectileIn, Transform FirePoint, float LifeTimeIn, int weaponIn)
     {
         if (!blockShoot)
-        { 
-            GameObject Projectile = Instantiate(projectileIn, FirePoint.position, FirePoint.rotation);
+        {
+            GameObject Projectile;
+            if (weaponIn == 2)
+            { 
+                Projectile = Instantiate(projectileIn, new Vector2(FirePoint.position.x + Random.Range(0f, 0.2f), FirePoint.position.y + Random.Range(0f , 0.5f)), FirePoint.rotation);
+            }
+            else 
+            {
+               Projectile = Instantiate(projectileIn, FirePoint.position, FirePoint.rotation);
+            }
+
             Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
             rb.AddForce(FirePoint.forward * ProjectileVelocity, ForceMode2D.Impulse);
             Projectile.GetComponent<Projectile>().BulletLifeTime = LifeTimeIn;
+            Random.Range(0, MagazineCount);
             AmmoInMagazine--;
         }
     }
