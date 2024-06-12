@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  ProjectileVelocity: 120
+  ProjectileVelocity: 60
   ProjectileCount: 1
   ReloadTime: 1
   WeaponName: Sniper
   WeaponSprite: {fileID: 0}
   MaxAmmoCount: 20
-  AmmoCount: 16
-  AmmoInMagazine: 1
+  AmmoCount: 17
+  AmmoInMagazine: 0
   MagazineCount: 1
-  blockShoot: 0
+  blockShoot: 1

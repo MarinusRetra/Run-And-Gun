@@ -62,7 +62,7 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void Jump()// kan later naar inputController moeten verplaatsen
+    void Jump()
     {
         IsGrounded = false;
         rb.velocity = new Vector2(rb.velocity.x, Controller.JumpForce);

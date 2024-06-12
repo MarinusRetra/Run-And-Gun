@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  ProjectileVelocity: 60
+  ProjectileVelocity: 90
   ProjectileCount: 6
   ReloadTime: 0.8
   WeaponName: Shotgun
   WeaponSprite: {fileID: 0}
   MaxAmmoCount: 60
-  AmmoCount: 0
-  AmmoInMagazine: 5
+  AmmoCount: 48
+  AmmoInMagazine: 6
   MagazineCount: 6
   blockShoot: 0

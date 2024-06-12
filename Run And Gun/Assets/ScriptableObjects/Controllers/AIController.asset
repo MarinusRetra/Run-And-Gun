@@ -9,6 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9490f2d6abd260c4f8c1f82349293141, type: 3}
+  m_Script: {fileID: 11500000, guid: 0797313f56fe4e6479c3bdf49811bef5, type: 3}
   m_Name: AIController
   m_EditorClassIdentifier: 
+  JumpForce: 10
+  MoveSpeed: 5

@@ -15,7 +15,7 @@ public class WeaponScriptable : ScriptableObject
     public bool blockShoot = false;
 
     /// <summary>
-    /// Instantiate een kogel op de Gegeven Firepoint
+    /// Instantiate een kogel op de Gegeven Firepoint en set de LifeTime van de kogel
     /// </summary>
     /// <param name="projectileIn"></param>
     /// <param name="FirePoint"></param>

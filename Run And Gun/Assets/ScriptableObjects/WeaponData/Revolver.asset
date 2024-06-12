@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
   m_Name: Revolver
   m_EditorClassIdentifier: 
-  ProjectileVelocity: 30
+  ProjectileVelocity: 20
   ProjectileCount: 1
-  ReloadTime: 1
+  ReloadTime: 0.1
   WeaponName: Revolver
   WeaponSprite: {fileID: 0}
   MaxAmmoCount: 60
   AmmoCount: 54
-  AmmoInMagazine: 5
-  MagazineCount: 6
+  AmmoInMagazine: 1
+  MagazineCount: 1
   blockShoot: 0
