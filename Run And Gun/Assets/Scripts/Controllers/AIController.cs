@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 
     [CreateAssetMenu(fileName = "AIController", menuName = "inputController/AIController")]
@@ -9,8 +8,13 @@ using UnityEngine;
         public float MoveSpeed;
         bool SwapPoint = false;
         private int currentMovePoint = 0;
-        private float nextMovePointDistance = 0.1f; //dit is hoe dichtbij de AI moet zijn voordat er een nieuwe movepoint wordt gebruikt
+        private float nextMovePointDistance = 0.1f; 
+        //Dit is hoe dichtbij de AI moet zijn voordat er een nieuwe movepoint wordt gebruikt
         
+
+        
+
+
         public bool ReturnJumpInput()
         {
             return true;
@@ -28,7 +32,6 @@ using UnityEngine;
             {
                 SwapPoint = !SwapPoint;   
             }
-
 
             //return 1 of -1 op basis van de x coordinaat van currentMovePoint
             if (currentMovePointX < AIPos.x)
