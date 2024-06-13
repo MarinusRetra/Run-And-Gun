@@ -10,9 +10,6 @@ using UnityEngine;
         private int currentMovePoint = 0;
         private float nextMovePointDistance = 0.1f; 
         //Dit is hoe dichtbij de AI moet zijn voordat er een nieuwe movepoint wordt gebruikt
-        
-
-        
 
 
         public bool ReturnJumpInput()
