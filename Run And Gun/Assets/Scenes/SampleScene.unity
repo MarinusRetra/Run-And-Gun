@@ -276,7 +276,7 @@ GameObject:
   m_Component:
   - component: {fileID: 46102843}
   - component: {fileID: 46102846}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2157,7 +2157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 412800964}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2410,7 +2410,8 @@ GameObject:
   - component: {fileID: 885696125}
   - component: {fileID: 885696124}
   - component: {fileID: 885696123}
-  m_Layer: 7
+  - component: {fileID: 885696128}
+  m_Layer: 8
   m_Name: AI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2445,7 +2446,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 2000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -2459,7 +2460,7 @@ Rigidbody2D:
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 6
 --- !u!61 &885696125
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2522,6 +2523,18 @@ Transform:
   - {fileID: 46102843}
   m_Father: {fileID: 1437948246}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &885696128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 885696122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfc9d69286bb36448e7d830a09e4fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1148942239
 GameObject:
   m_ObjectHideFlags: 0
@@ -2533,7 +2546,7 @@ GameObject:
   - component: {fileID: 1148942241}
   - component: {fileID: 1148942240}
   - component: {fileID: 1148942242}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AISpriteOctopuss
   m_TagString: Untagged
   m_Icon: {fileID: 0}

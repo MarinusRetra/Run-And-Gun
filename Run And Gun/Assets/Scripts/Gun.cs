@@ -20,6 +20,7 @@ public class Gun : MonoBehaviour
             weaponIn[i].AmmoInMagazine = weaponIn[i].MagazineCount;
             weaponIn[i].blockShoot = false;
         }
+        //GetComponent<SpriteRenderer>().sprite = weaponIn[CurrentWeapon].WeaponSprite;
     }
     void Update()
     {
@@ -46,7 +47,7 @@ public class Gun : MonoBehaviour
         }
     }
     /// <summary>
-    /// Wisselt je wapen en je projectile naar dat van het gezette wapen.
+    /// Wisselt je wapen, je projectile en de sprite naar dat van het gezette wapen.
     /// </summary>
     /// <param name="weaponIn"></param>
     void SwapWeapon(int weaponIn)
