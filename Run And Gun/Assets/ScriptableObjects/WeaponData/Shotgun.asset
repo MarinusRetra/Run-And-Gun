@@ -16,9 +16,9 @@ MonoBehaviour:
   ProjectileCount: 6
   ReloadTime: 0.8
   WeaponName: Shotgun
-  WeaponSprite: {fileID: 0}
+  WeaponSprite: {fileID: -1784988220, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
   MaxAmmoCount: 60
-  AmmoCount: 48
+  AmmoCount: 60
   AmmoInMagazine: 6
   MagazineCount: 6
   blockShoot: 0

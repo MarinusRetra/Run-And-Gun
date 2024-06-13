@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: 5076ee51c7008354583db321a008d8a2
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 145
+        width: 65
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf3b86750db478f4198065dafd84709d
+      internalID: -647670187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 147
+        width: 50
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d00d0962d64494296a0ad61d6ed96b
+      internalID: -1199999294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_2
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 146
+        width: 70
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8781c1171e1480e4bab572f07fbc3097
+      internalID: -1893335615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_3
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 146
+        width: 43
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3adbc8e73d24e6445b2fa38155b1e5ec
+      internalID: -1376210648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_4
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 126
+        width: 70
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f6cd973b0c433b459e4a7d893b95c69
+      internalID: -650543955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_5
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 130
+        width: 49
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c295d651b2c5824389d1a6517dffbd6
+      internalID: -1202473087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_6
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 127
+        width: 73
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76b5801c002dd35418b88c5f9106216d
+      internalID: -968326785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_7
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 124
+        width: 66
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75fe8f7fa36a51746aec2756e7a23a90
+      internalID: 557907073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 111
+        width: 54
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b8547f81d72aa40951480f3c184208
+      internalID: 1737869065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 114
+        width: 46
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dad5313152b8dab418b04ecb8040ac96
+      internalID: 426680913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_10
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 105
+        width: 60
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f295fb34e68e29a4f924c13253723b9b
+      internalID: -666476661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_11
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 104
+        width: 68
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d727118ce34026478ec0550af7059ff
+      internalID: 311045334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_12
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 93
+        width: 54
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dcc95dd080aa040bc4dea92858d0e0
+      internalID: 1914302736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_13
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 97
+        width: 52
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 551ebf9d62488dd4ca49fe16f30b220d
+      internalID: -1784988220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_14
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 85
+        width: 46
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f38bab1e69a0c643ae9abe63a8dbcd1
+      internalID: 294782210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_15
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 85
+        width: 66
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20f0b5b31f95a374994018aed55be6e5
+      internalID: 1542621475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_16
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 76
+        width: 41
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: facbcd2a77e4eaf4e8ebbb0fd05c3226
+      internalID: -856913649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_17
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 81
+        width: 66
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3959599821c676e45af02c5ace358772
+      internalID: -50232488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_18
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 62
+        width: 62
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f88a7ea587d9564ea39c494e83ca103
+      internalID: 454104989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_19
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 70
+        width: 44
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec90edb140576444fa19539cb36a54cc
+      internalID: 1334197914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 65
+        width: 56
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e59d334aa9a6674e8624c2bf6c45283
+      internalID: -1346150167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 62
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8619c479244aa764b8d6b8184930d696
+      internalID: 852421217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_22
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 55
+        width: 58
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8541ed1675016d44f89d8e666567995d
+      internalID: 1296320042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_23
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 54
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a96889954266be946bbfe7dd8df94602
+      internalID: -1033009680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_24
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 43
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b424322df307654784a836b2f03e925
+      internalID: 349669057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_25
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 42
+        width: 59
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 087fb03f999f802478d74e385c784bfe
+      internalID: 1543346847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_26
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 40
+        width: 53
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43241cefa9e674448bb11358e0754c18
+      internalID: 882388744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 24
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0389ec2e8551b8349a10069264131ce1
+      internalID: 1063383275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_28
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 28
+        width: 91
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a182512bb7d580842a5f284fed8a9156
+      internalID: -1238710635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_29
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 38
+        width: 69
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6919669931693045b1ef3215e7de300
+      internalID: 1219034334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_30
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 28
+        width: 38
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1baa3da099a6ba94db613d32e965b1ac
+      internalID: -1496061429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_31
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 18
+        width: 68
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd52e13c1611f8f499ddd5d3356928a4
+      internalID: 237846883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_32
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 17
+        width: 65
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b545875ee988e9747bfe15d0bb82d3f2
+      internalID: -890899767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_33
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 5
+        width: 50
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a961fde288777304c92dbc9bf6120ea4
+      internalID: 2036788441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_34
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 9
+        width: 39
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef8355e3ec04824da4eab0909d312ad
+      internalID: 727445313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GunSprites Blind_FireFly_35
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1
+        width: 61
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d39157fb40c8b54dbe6c2786eca3c91
+      internalID: -334977290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GunSprites Blind_FireFly_0: -647670187
+      GunSprites Blind_FireFly_1: -1199999294
+      GunSprites Blind_FireFly_10: -666476661
+      GunSprites Blind_FireFly_11: 311045334
+      GunSprites Blind_FireFly_12: 1914302736
+      GunSprites Blind_FireFly_13: -1784988220
+      GunSprites Blind_FireFly_14: 294782210
+      GunSprites Blind_FireFly_15: 1542621475
+      GunSprites Blind_FireFly_16: -856913649
+      GunSprites Blind_FireFly_17: -50232488
+      GunSprites Blind_FireFly_18: 454104989
+      GunSprites Blind_FireFly_19: 1334197914
+      GunSprites Blind_FireFly_2: -1893335615
+      GunSprites Blind_FireFly_20: -1346150167
+      GunSprites Blind_FireFly_21: 852421217
+      GunSprites Blind_FireFly_22: 1296320042
+      GunSprites Blind_FireFly_23: -1033009680
+      GunSprites Blind_FireFly_24: 349669057
+      GunSprites Blind_FireFly_25: 1543346847
+      GunSprites Blind_FireFly_26: 882388744
+      GunSprites Blind_FireFly_27: 1063383275
+      GunSprites Blind_FireFly_28: -1238710635
+      GunSprites Blind_FireFly_29: 1219034334
+      GunSprites Blind_FireFly_3: -1376210648
+      GunSprites Blind_FireFly_30: -1496061429
+      GunSprites Blind_FireFly_31: 237846883
+      GunSprites Blind_FireFly_32: -890899767
+      GunSprites Blind_FireFly_33: 2036788441
+      GunSprites Blind_FireFly_34: 727445313
+      GunSprites Blind_FireFly_35: -334977290
+      GunSprites Blind_FireFly_4: -650543955
+      GunSprites Blind_FireFly_5: -1202473087
+      GunSprites Blind_FireFly_6: -968326785
+      GunSprites Blind_FireFly_7: 557907073
+      GunSprites Blind_FireFly_8: 1737869065
+      GunSprites Blind_FireFly_9: 426680913
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

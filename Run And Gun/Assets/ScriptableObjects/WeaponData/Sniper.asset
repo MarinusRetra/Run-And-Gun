@@ -16,9 +16,9 @@ MonoBehaviour:
   ProjectileCount: 1
   ReloadTime: 1
   WeaponName: Sniper
-  WeaponSprite: {fileID: 0}
+  WeaponSprite: {fileID: -650543955, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
   MaxAmmoCount: 20
-  AmmoCount: 17
-  AmmoInMagazine: 0
+  AmmoCount: 20
+  AmmoInMagazine: 1
   MagazineCount: 1
-  blockShoot: 1
+  blockShoot: 0

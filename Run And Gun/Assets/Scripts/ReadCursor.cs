@@ -14,5 +14,6 @@ public class ReadCursor : MonoBehaviour
     {
         //pakt de muis positie en draait het wapen ernaar toe
         transform.LookAt(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector3.back);
+        transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z+90);
     }
 }

@@ -53,6 +53,7 @@ public class Gun : MonoBehaviour
     {
             CurrentWeapon = weaponIn;
             SetBullet(CurrentWeapon);
+            GetComponent<SpriteRenderer>().sprite = this.weaponIn[CurrentWeapon].WeaponSprite;
     }
 
     /// <summary>
