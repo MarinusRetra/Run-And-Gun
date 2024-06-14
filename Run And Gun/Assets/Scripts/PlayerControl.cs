@@ -38,6 +38,24 @@ public class PlayerControl : MonoBehaviour
         { 
             JumpBuffer -= Time.deltaTime;
         }
+        
+         TurnToCursor();
+    }
+    /// <summary>
+    /// Zorgt dat de speler altijd de kant van de cursor op kijkt
+    /// </summary>
+    void TurnToCursor()
+    {
+        var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (mouseWorldPos.x >= transform.position.x)
+        {
+            transform.localScale = new Vector3(-1, 1f, 1f);
+        }
+        else if (mouseWorldPos.x <= transform.position.x)
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour
     {
         Debug.Log("Bullet hit");
         Destroy(gameObject);
-        collision.GetComponent<Health>().TakeDamage(Bullet[currentBullet].Damage);
+        //collision.GetComponent<Health>().TakeDamage(Bullet[currentBullet].Damage);
     }
     private void Start()
     {

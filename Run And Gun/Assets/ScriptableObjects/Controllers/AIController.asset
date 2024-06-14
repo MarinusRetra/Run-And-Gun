@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: AIController
   m_EditorClassIdentifier: 
   JumpForce: 10
-  MoveSpeed: 5
+  MoveSpeed: 4
+  SwapPoint: 0
+  nextMovePointDistance: 0.2

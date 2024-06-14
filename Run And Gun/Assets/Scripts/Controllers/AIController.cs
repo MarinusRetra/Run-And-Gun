@@ -6,12 +6,12 @@ using UnityEngine;
     {
         public float JumpForce;
         public float MoveSpeed;
-        bool SwapPoint = false;
+        [SerializeField] bool SwapPoint = false;
         private int currentMovePoint = 0;
-        private float nextMovePointDistance = 0.1f; 
+
+        public float nextMovePointDistance = 0.2f; 
+
         //Dit is hoe dichtbij de AI moet zijn voordat er een nieuwe movepoint wordt gebruikt
-
-
         public bool ReturnJumpInput()
         {
             return true;
