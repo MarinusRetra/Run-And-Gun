@@ -1,15 +1,19 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Weapon")]
 public class WeaponScriptable : ScriptableObject
 {
+    [SerializeField] int ammoCount;
     public int ProjectileVelocity;
     public int ProjectileCount;
     public float ReloadTime;
     public string WeaponName;
     public Sprite WeaponSprite;
     public int MaxAmmoCount;
-    public int AmmoCount;
+    public int AmmoCount 
+    { get { return ammoCount; } // Zorgt dat je niet boven MaxAmmoCount kan gaan
+      set { ammoCount = value <= MaxAmmoCount ? value : MaxAmmoCount; }  } 
     public int AmmoInMagazine;
     public int MagazineCount;
     public bool blockShoot = false;
@@ -19,7 +23,7 @@ public class WeaponScriptable : ScriptableObject
     /// </summary>
     /// <param name="projectileIn"></param>
     /// <param name="FirePoint"></param>
-    public void Shoot(GameObject projectileIn, Transform FirePoint, float LifeTimeIn, int weaponIn)
+    public void Shoot(GameObject projectileIn, Transform FirePoint, float LifeTimeIn, int damageIn, int weaponIn)
     {
         if (!blockShoot)
         {
@@ -36,6 +40,7 @@ public class WeaponScriptable : ScriptableObject
             Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
             rb.AddForce(FirePoint.forward * ProjectileVelocity, ForceMode2D.Impulse);
             Projectile.GetComponent<Projectile>().BulletLifeTime = LifeTimeIn;
+            Projectile.GetComponent<Projectile>().Damage = damageIn;
             Random.Range(0, MagazineCount);
             AmmoInMagazine--;
         }

@@ -1,15 +1,15 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
     [HideInInspector] public float BulletLifeTime;
+    [HideInInspector] public int Damage;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("Bullet hit");
         Destroy(gameObject);
-        //collision.GetComponent<Health>().TakeDamage(Bullet[currentBullet].Damage);
+        collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
     }
     private void Start()
     {

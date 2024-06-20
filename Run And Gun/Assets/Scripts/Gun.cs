@@ -8,8 +8,8 @@ public class Gun : MonoBehaviour
     public GameObject Projectile;
     public Bullet[] Bullet;
     private int currentBullet = 0;
-
     int CurrentWeapon = 0;
+
     private void Start()
     {
         //zet de AmmoCount naar MaxAmmoCount van het i en doet hetzelfde met AmmoInMagazine
@@ -61,9 +61,28 @@ public class Gun : MonoBehaviour
     /// Wisselt De kogel die geschoten wordt, niet het wapen
     /// </summary>
     /// <param name="bulletIn"></param>
-    public void SetBullet(int bulletIn)
+    void SetBullet(int bulletIn)
     {
         currentBullet = bulletIn;
+    }
+
+
+    /// <summary>
+    /// Deelt de ammo count door ammoIn en voegt het resultaat toe aan het huidige wapen 
+    /// en dat resultaat nog 1 keer gedeeld door 2 toe aan de andere wapens
+    /// </summary>
+    /// <param name="ammoIn"></param>
+    public void AddAmmo(int ammoIn)
+    {
+        var currentGun = weaponIn[CurrentWeapon];
+        currentGun.AmmoCount += currentGun.MaxAmmoCount / ammoIn;
+        foreach(var g in  weaponIn)
+        {
+            if (g != currentGun)
+            {
+                g.AmmoCount += g.MaxAmmoCount / ammoIn / 2;
+            }
+        }
     }
 
     /// <summary>
@@ -89,7 +108,7 @@ public class Gun : MonoBehaviour
         {
             for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
             {
-                weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint, Bullet[currentBullet].LifeTime, CurrentWeapon);
+                weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint, Bullet[currentBullet].LifeTime,Bullet[currentBullet].Damage, CurrentWeapon);
 
             }
         }
