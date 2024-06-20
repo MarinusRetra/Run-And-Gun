@@ -1,29 +1,47 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System;
+using System.Collections.Generic;
+
 
 public class AIMovement : MonoBehaviour
 {
     public AiController Controller;
     Rigidbody2D rb;
+    bool SwapPoint;
     public GameObject[] MovePoints;
     public Transform[] JumpPoints;
+    KeyValuePair<float, bool> MovementInfo;
 
     private void Start()
     {
+        SwapPoint = Convert.ToBoolean(UnityEngine.Random.Range(0, 2));// dit is zodat niet elke ai dezelfde kant op loopt.
         rb = GetComponent<Rigidbody2D>();   
     }
 
     private void Update()
     {
-        //zet de velocity op basis van waar de volgende movePoint is
-        rb.velocity = new Vector2(Controller.ReturnMovementInput(MovePoints, transform.position) * Controller.MoveSpeed, rb.velocity.y);
+        Controller.ReturnMovementInput(MovePoints, transform.position, SwapPoint);
 
-        //als de AI op een JumpPoint staat Jump()
-        if (Controller.ReturnJumpInput(JumpPoints, transform.position))
-        {
-            Jump();
+           //Zet de velocity op basis van waar de volgende movePoint is
+           MovementInfo = Controller.ReturnMovementInput(MovePoints, transform.position, SwapPoint);
+
+           rb.velocity = new Vector2(MovementInfo.Key * Controller.MoveSpeed, rb.velocity.y);
+           SwapPoint = MovementInfo.Value;
+
+
+        //Als de AI op een JumpPoint staat en jumpPoints ingesteld heeft, spring
+        try
+        { 
+            if (Controller.ReturnJumpInput(JumpPoints, transform.position))
+            {
+                Jump();
+            }
         }
+        catch { }
+        // deze try catch is om een mogelijke null reference exception te vangen
 
-        //Draait de ai op basis van zijn velocity
+        //Draait de ai op basis van velocity
         if (rb.velocity.x >= 0.01f)
         {
            transform.localScale = new Vector3(-1, 1f, 1f);
@@ -37,6 +55,11 @@ public class AIMovement : MonoBehaviour
     void Jump()
     { 
         rb.velocity = new Vector2(rb.velocity.x, Controller.JumpForce);
+    }
+
+    void ToggleSwapPoint()
+    { 
+       SwapPoint = !SwapPoint;
     }
 
 }

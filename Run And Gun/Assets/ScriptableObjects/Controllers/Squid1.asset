@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   JumpForce: 10
   MoveSpeed: 4
-  SwapPoint: 0
   nextMovePointDistance: 0.2

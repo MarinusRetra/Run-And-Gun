@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0797313f56fe4e6479c3bdf49811bef5, type: 3}
   m_Name: GroundSquid
   m_EditorClassIdentifier: 
-  JumpForce: 11
+  JumpForce: 8
   MoveSpeed: 4
-  SwapPoint: 0
   nextMovePointDistance: 1

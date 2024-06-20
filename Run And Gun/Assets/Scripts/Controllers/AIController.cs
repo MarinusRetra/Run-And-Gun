@@ -1,5 +1,5 @@
 using System;
-using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
     [CreateAssetMenu(fileName = "AIController", menuName = "inputController/AIController")]
@@ -7,7 +7,6 @@ using UnityEngine;
     {
         public float JumpForce;
         public float MoveSpeed;
-        [SerializeField] bool SwapPoint = false;
         private int currentMovePoint = 0;
 
         public float nextMovePointDistance = 0.2f; 
@@ -29,29 +28,29 @@ using UnityEngine;
             return false;
         }
 
-        public float ReturnMovementInput(GameObject[] movePointsIn, Vector2 AIPos)
+        public KeyValuePair<float,bool> ReturnMovementInput(GameObject[] movePointsIn, Vector2 AIPos, bool swapPointIn)
         {
-            // zet de currentMovePoint op 0 of 1 op basis van SwapPoint
-            currentMovePoint = Convert.ToInt32(SwapPoint);
+        // zet de currentMovePoint op 0 of 1 op basis van SwapPoint
+            currentMovePoint = Convert.ToInt32(swapPointIn);
 
             float currentMovePointX = movePointsIn[currentMovePoint].transform.position.x;
 
-            //toggled de swapoint elke keer wanneer de AI in nextMovePointDistance is
+            //toggled swapPoint elke keer wanneer de AI in nextMovePointDistance is
             if (Vector2.Distance(AIPos, movePointsIn[currentMovePoint].transform.position) < nextMovePointDistance)
             {
-                SwapPoint = !SwapPoint;
+                swapPointIn = !swapPointIn;
             }
 
             //return 1 of -1 op basis van de x coordinaat van currentMovePoint
             if (currentMovePointX < AIPos.x)
             {
-                 return -1f;
+                return new(-1,swapPointIn);
             }
             if (currentMovePointX > AIPos.x)
             {
-                 return 1f;
+                return new(1,swapPointIn);
             }
-            return 0f;
+            return new(0f,swapPointIn);
         }
         Transform ReturnClosestJumpPoint(Transform[] jumpPointsIn, Vector2 AIPos)
         {
