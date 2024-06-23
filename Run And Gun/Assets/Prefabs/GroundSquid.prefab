@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4689008648968387639}
+  - component: {fileID: 6482199888695777459}
+  - component: {fileID: 2050200292205459591}
   - component: {fileID: 9019848364830311423}
   - component: {fileID: 2700866566178207817}
-  - component: {fileID: 2050200292205459591}
-  - component: {fileID: 6482199888695777459}
   - component: {fileID: 5935160540617847568}
   - component: {fileID: 4627375032661140001}
   m_Layer: 8
@@ -39,6 +39,39 @@ Transform:
   - {fileID: 1522210252972854295}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6482199888695777459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2324269842700541203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cfc9d69286bb36448e7d830a09e4fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  AmmoCratePrefab: {fileID: 5480786706324713070, guid: 93472483923031541b513b8d23a398c8, type: 3}
+--- !u!114 &2050200292205459591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2324269842700541203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfa677a4febc69443b89f8f60ee89d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 11400000, guid: afe75225bb0fdf247b7734a76f9dde32, type: 2}
+  MovePoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  JumpPoints:
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!61 &9019848364830311423
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -96,7 +129,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -111,39 +144,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &2050200292205459591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2324269842700541203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfa677a4febc69443b89f8f60ee89d2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Controller: {fileID: 11400000, guid: afe75225bb0fdf247b7734a76f9dde32, type: 2}
-  MovePoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  JumpPoints:
-  - {fileID: 0}
-  - {fileID: 0}
---- !u!114 &6482199888695777459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2324269842700541203}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cfc9d69286bb36448e7d830a09e4fe4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  AmmoCratePrefab: {fileID: 5480786706324713070, guid: 93472483923031541b513b8d23a398c8, type: 3}
 --- !u!199 &5935160540617847568
 ParticleSystemRenderer:
   serializedVersion: 6

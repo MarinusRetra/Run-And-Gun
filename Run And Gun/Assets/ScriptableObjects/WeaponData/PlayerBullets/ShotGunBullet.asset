@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1915477dc395d4342a9d464f152ed46f, type: 3}
   m_Name: ShotGunBullet
   m_EditorClassIdentifier: 
-  Damage: 5
+  Damage: 15
   LifeTime: 2

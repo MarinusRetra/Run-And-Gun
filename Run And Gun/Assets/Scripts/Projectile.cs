@@ -7,9 +7,11 @@ public class Projectile : MonoBehaviour
     [HideInInspector] public int Damage;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Bullet hit");
         Destroy(gameObject);
-        collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
+        try
+        {
+            collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
+        }   catch { }
     }
     private void Start()
     {

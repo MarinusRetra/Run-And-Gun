@@ -30,7 +30,8 @@ public class WeaponScriptable : ScriptableObject
             GameObject Projectile;
             if (weaponIn == 2)
             { 
-                Projectile = Instantiate(projectileIn, new Vector2(FirePoint.position.x + Random.Range(0f, 0.2f), FirePoint.position.y + Random.Range(0f , 0.5f)), FirePoint.rotation);
+                Projectile = Instantiate(projectileIn, new Vector2(FirePoint.position.x + Random.Range(-0.3f, 0.3f), FirePoint.position.y + Random.Range(-0.5f , 0.8f)), FirePoint.rotation);
+                Projectile.transform.eulerAngles = new Vector3(Random.Range(0, -180), 0, 0);
             }
             else 
             {
@@ -38,7 +39,7 @@ public class WeaponScriptable : ScriptableObject
             }
 
             Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
-            rb.AddForce(FirePoint.forward * ProjectileVelocity, ForceMode2D.Impulse);
+            rb.AddForce(Projectile.transform.forward * ProjectileVelocity, ForceMode2D.Impulse);
             Projectile.GetComponent<Projectile>().BulletLifeTime = LifeTimeIn;
             Projectile.GetComponent<Projectile>().Damage = damageIn;
             Random.Range(0, MagazineCount);

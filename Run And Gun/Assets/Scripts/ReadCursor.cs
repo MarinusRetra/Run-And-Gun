@@ -1,10 +1,14 @@
+using System;
 using UnityEngine;
 
 public class ReadCursor : MonoBehaviour
 {
+    Transform transformer;
+
     public Texture2D CrossAir;
     private void Start()
     {
+        transformer = this.transform;
         //set de texture van de muis naar de crossair texture
         Cursor.SetCursor(CrossAir, Vector2.zero, CursorMode.Auto);
     }

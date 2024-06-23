@@ -50,11 +50,11 @@ public class PlayerControl : MonoBehaviour
 
         if (mouseWorldPos.x >= transform.position.x)
         {
-            transform.localScale = new Vector3(-1, 1f, 1f);
+           transform.localScale = new Vector3(1, 1f, 1f);
         }
         else if (mouseWorldPos.x <= transform.position.x)
         {
-            transform.localScale = new Vector3(1f, 1f, 1f);
+           transform.localScale = new Vector3(-1f, 1f, 1f);
         }
     }
 
