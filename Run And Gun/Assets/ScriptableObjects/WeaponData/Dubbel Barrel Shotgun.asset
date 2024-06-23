@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
-  m_Name: Sniper
+  m_Name: Dubbel Barrel Shotgun
   m_EditorClassIdentifier: 
-  ammoCount: 16
-  thisWeapon: 3
-  ProjectileVelocity: 30
-  ProjectileCount: 1
-  ReloadTime: 1
-  WeaponName: Sniper
-  WeaponSprite: {fileID: -650543955, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
-  MaxAmmoCount: 20
-  AmmoInMagazine: 1
-  MagazineCount: 1
+  ammoCount: 48
+  thisWeapon: 1
+  ProjectileVelocity: 10
+  ProjectileCount: 2
+  ReloadTime: 0.8
+  WeaponName: Revolver
+  WeaponSprite: {fileID: -1033009680, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
+  MaxAmmoCount: 60
+  AmmoInMagazine: 6
+  MagazineCount: 6
   blockShoot: 0

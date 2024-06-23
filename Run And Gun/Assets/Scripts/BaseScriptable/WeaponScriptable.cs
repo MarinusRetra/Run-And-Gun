@@ -1,10 +1,11 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Weapon")]
 public class WeaponScriptable : ScriptableObject
 {
     [SerializeField] int ammoCount;
+    public enum WeaponType  { None, DB, Shotgun, Sniper}
+    public WeaponType thisWeapon;
     public int ProjectileVelocity;
     public int ProjectileCount;
     public float ReloadTime;
@@ -23,27 +24,41 @@ public class WeaponScriptable : ScriptableObject
     /// </summary>
     /// <param name="projectileIn"></param>
     /// <param name="FirePoint"></param>
-    public void Shoot(GameObject projectileIn, Transform FirePoint, float LifeTimeIn, int damageIn, int weaponIn)
+    public void Shoot(GameObject projectileIn, Transform FirePoint, float LifeTimeIn, int damageIn, int projectileCountIn)
     {
         if (!blockShoot)
         {
-            GameObject Projectile;
-            if (weaponIn == 2)
-            { 
-                Projectile = Instantiate(projectileIn, new Vector2(FirePoint.position.x + Random.Range(-0.3f, 0.3f), FirePoint.position.y + Random.Range(-0.5f , 0.8f)), FirePoint.rotation);
-                Projectile.transform.eulerAngles = new Vector3(Random.Range(0, -180), 0, 0);
-            }
-            else 
-            {
-               Projectile = Instantiate(projectileIn, FirePoint.position, FirePoint.rotation);
-            }
+           //pulse Pos wordt gebruikt om van zichzelf af te trekken om een alternerend shietpatroon te maken
+           float pulsePos = -0.2f; 
+           for (int i = 0; i < projectileCountIn; i++)
+           {
+              switch (thisWeapon)
+              {
+              case WeaponType.Shotgun:
+                  projectileIn = Instantiate(projectileIn, new Vector2(FirePoint.position.x + Random.Range(-0.3f, 0.3f), FirePoint.position.y + Random.Range(-0.5f, 0.8f)), FirePoint.rotation);
+              break;
+              
+              case WeaponType.DB:
+                   projectileIn = Instantiate(projectileIn, new Vector2(FirePoint.position.x, FirePoint.position.y - pulsePos), FirePoint.rotation);
+                   pulsePos = -pulsePos;
+                  break;
 
-            Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
-            rb.AddForce(Projectile.transform.forward * ProjectileVelocity, ForceMode2D.Impulse);
-            Projectile.GetComponent<Projectile>().BulletLifeTime = LifeTimeIn;
-            Projectile.GetComponent<Projectile>().Damage = damageIn;
-            Random.Range(0, MagazineCount);
-            AmmoInMagazine--;
+              case WeaponType.Sniper:
+                 projectileIn = Instantiate(projectileIn, FirePoint.position, FirePoint.rotation);
+              break;
+              
+              default:
+                  projectileIn = Instantiate(projectileIn, FirePoint.position, FirePoint.rotation);
+              break;
+              }
+          
+              AmmoInMagazine--;
+              Rigidbody2D rb = projectileIn.GetComponent<Rigidbody2D>();
+              rb.AddForce(projectileIn.transform.forward * ProjectileVelocity, ForceMode2D.Impulse);
+              projectileIn.GetComponent<Projectile>().BulletLifeTime = LifeTimeIn;
+              projectileIn.GetComponent<Projectile>().Damage = damageIn;
+              Random.Range(0, MagazineCount);
+           }
         }
     }
     /// <summary>

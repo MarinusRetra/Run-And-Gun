@@ -106,11 +106,7 @@ public class Gun : MonoBehaviour
         // als je meer dan 0 ammo hebt schiet een [ProjectileCount] aantal projectiles
         if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoInMagazine > 0)
         {
-            for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
-            {
-                weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint, Bullet[currentBullet].LifeTime,Bullet[currentBullet].Damage, CurrentWeapon);
-
-            }
+            weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint, Bullet[currentBullet].LifeTime,Bullet[currentBullet].Damage, weaponIn[CurrentWeapon].ProjectileCount);
         }
         // als je magazijn leeg is en je totale ammo 0 is dan gaat dit af
         else if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoCount < 1 && weaponIn[CurrentWeapon].AmmoInMagazine < 1)
