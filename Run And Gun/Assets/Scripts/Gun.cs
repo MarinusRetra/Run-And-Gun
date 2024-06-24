@@ -25,16 +25,7 @@ public class Gun : MonoBehaviour
         {
             StartCoroutine(AIShoot());
         }
-
     }
-
-    IEnumerator AIShoot()
-    {
-        yield return new WaitForSeconds(weaponIn[CurrentWeapon].ReloadTime-Random.Range(0,0.5f));
-        Shoot();
-        StartCoroutine(AIShoot());
-    }
-
     void Update()
     {
         if (gameObject.CompareTag("Player"))
@@ -44,6 +35,18 @@ public class Gun : MonoBehaviour
             CheckReload();
         }
     }
+
+    /// <summary>
+    /// Schiet elke keer dat er ReloadTime aan seconden voorbij is gegaan
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator AIShoot()
+    {
+        yield return new WaitForSeconds(weaponIn[CurrentWeapon].ReloadTime-Random.Range(0,0.5f));
+        Shoot();
+        StartCoroutine(AIShoot());
+    }
+
     /// <summary>
     /// Wisselt naar het wapen op basis van de input
     /// </summary>

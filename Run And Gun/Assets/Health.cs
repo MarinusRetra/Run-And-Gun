@@ -33,7 +33,6 @@ public class Health : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         deathParticles = GetComponent<ParticleSystem>();
         weapon = gameObject.GetComponentInChildren<Gun>();
-
     }
     public void TakeDamage(int damageIn)
     { 
@@ -46,6 +45,7 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        weapon.StopAllCoroutines();
         weapon.enabled = false;
         Collider.enabled = false;
         spriteRenderer.enabled = false;

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5484989469285627458}
   - component: {fileID: 6860343216965639707}
   - component: {fileID: 6674301870519020231}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: AISpriteOctopuss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3521037765744180543}
   - component: {fileID: 5823493885915852153}
   - component: {fileID: 5364606819801894891}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: Weapon
   m_TagString: AI
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4893822606488838938}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: FirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 4581978154849355702}
   - component: {fileID: 969474131754156537}
   - component: {fileID: 7279009987909583726}
-  m_Layer: 8
+  m_Layer: 7
   m_Name: FlyerAI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

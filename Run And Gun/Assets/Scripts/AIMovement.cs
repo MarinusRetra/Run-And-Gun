@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System;
 using System.Collections.Generic;
 
@@ -11,10 +10,12 @@ public class AIMovement : MonoBehaviour
     bool SwapPoint;
     public GameObject[] MovePoints;
     public Transform[] JumpPoints;
+    SpriteRenderer SpriteRenderer;
     KeyValuePair<float, bool> MovementInfo;
 
     private void Start()
     {
+        SpriteRenderer = GetComponentInChildren<SpriteRenderer>();
         SwapPoint = Convert.ToBoolean(UnityEngine.Random.Range(0, 2));// dit is zodat niet elke ai dezelfde kant op loopt.
         rb = GetComponent<Rigidbody2D>();   
     }
@@ -44,11 +45,11 @@ public class AIMovement : MonoBehaviour
         //Draait de ai op basis van velocity
         if (rb.velocity.x >= 0.01f)
         {
-           transform.localScale = new Vector3(-1, 1f, 1f);
+           SpriteRenderer.transform.localScale = new Vector3(-6, 6f, 6f);
         }
         else if (rb.velocity.x <= -0.01f)
         {
-           transform.localScale = new Vector3(1f, 1f, 1f);
+           SpriteRenderer.transform.localScale = new Vector3(6f, 6f, 6f);
         }
     }
 

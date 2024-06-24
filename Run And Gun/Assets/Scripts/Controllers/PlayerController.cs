@@ -1,20 +1,18 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Net;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "PlayerController", menuName = "inputController/PlayerController")]
-public class PlayerController : InputController
+public class PlayerController : ScriptableObject
 {
     public float JumpForce;
     public float MoveSpeed;
 
-    public override bool ReturnJumpInput()
+    public bool ReturnJumpInput()
     {
         return Input.GetButtonDown("Jump");
     }
 
-    public override float ReturnMovementInput()
+    public float ReturnMovementInput()
     {
         return Input.GetAxisRaw("Horizontal");
     }

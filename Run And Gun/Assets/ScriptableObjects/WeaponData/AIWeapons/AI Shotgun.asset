@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: AI Shotgun
   m_EditorClassIdentifier: 
   ammoCount: 99999999
-  thisWeapon: 2
-  ProjectileVelocity: 15
+  thisWeapon: 0
+  ProjectileVelocity: 3
   ProjectileCount: 3
   ProjectileLifeTime: 3
   Damage: 1
-  ReloadTime: 1
+  ReloadTime: 2
   WeaponName: ShotgunAI
   WeaponSprite: {fileID: -1893335615, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
   MaxAmmoCount: 99999999
-  AmmoInMagazine: 99981
+  AmmoInMagazine: 99993
   MagazineCount: 99999
   blockShoot: 0
