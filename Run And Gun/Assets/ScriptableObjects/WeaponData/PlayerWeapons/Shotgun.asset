@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
   m_Name: Shotgun
   m_EditorClassIdentifier: 
-  ammoCount: 60
+  ammoCount: 36
   thisWeapon: 2
-  ProjectileVelocity: 15
+  ProjectileVelocity: 20
   ProjectileCount: 6
+  ProjectileLifeTime: 1
+  Damage: 15
   ReloadTime: 0.8
   WeaponName: Shotgun
   WeaponSprite: {fileID: -1784988220, guid: 5076ee51c7008354583db321a008d8a2, type: 3}

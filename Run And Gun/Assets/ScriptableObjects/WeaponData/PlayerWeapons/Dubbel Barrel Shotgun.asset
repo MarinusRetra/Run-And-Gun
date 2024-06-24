@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
-  m_Name: Revolver
+  m_Name: Dubbel Barrel Shotgun
   m_EditorClassIdentifier: 
-  ammoCount: 48
+  ammoCount: 56
   thisWeapon: 1
-  ProjectileVelocity: 10
+  ProjectileVelocity: 15
   ProjectileCount: 2
+  ProjectileLifeTime: 1
+  Damage: 50
   ReloadTime: 0.8
   WeaponName: Revolver
   WeaponSprite: {fileID: -1033009680, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
   MaxAmmoCount: 60
-  AmmoInMagazine: 6
-  MagazineCount: 6
+  AmmoInMagazine: 2
+  MagazineCount: 2
   blockShoot: 0

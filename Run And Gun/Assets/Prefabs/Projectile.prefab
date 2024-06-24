@@ -130,6 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletLifeTime: 0
   Damage: 0
+  Particles: {fileID: 1100159740199664191, guid: e13916d7882deb048960827b572ee267, type: 3}
 --- !u!61 &-9146845179761065487
 BoxCollider2D:
   m_ObjectHideFlags: 0

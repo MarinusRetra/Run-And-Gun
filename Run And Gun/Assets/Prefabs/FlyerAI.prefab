@@ -116,13 +116,14 @@ GameObject:
   m_Component:
   - component: {fileID: 3521037765744180543}
   - component: {fileID: 5823493885915852153}
+  - component: {fileID: 5364606819801894891}
   m_Layer: 8
   m_Name: Weapon
-  m_TagString: Untagged
+  m_TagString: AI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3521037765744180543
 Transform:
   m_ObjectHideFlags: 0
@@ -180,7 +181,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: e8cf4cd5a74bda04f99102d9f96a9d86, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -188,9 +189,25 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5364606819801894891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000321574604165901}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e691fd5578484749a7d7df139b532fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirePoint: {fileID: 4893822606488838938}
+  weaponIn:
+  - {fileID: 11400000, guid: 7cabb3b04ac211b4a83f49c9f0d2a51d, type: 2}
+  Projectile: {fileID: 7181512274810957105, guid: d9b9ae9641a85814597f455e9b0f27b6, type: 3}
 --- !u!1 &2036177097063707066
 GameObject:
   m_ObjectHideFlags: 0

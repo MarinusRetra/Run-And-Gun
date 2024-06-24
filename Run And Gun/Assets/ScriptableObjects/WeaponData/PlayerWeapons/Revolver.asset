@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
+  m_Name: Revolver
+  m_EditorClassIdentifier: 
+  ammoCount: 48
+  thisWeapon: 0
+  ProjectileVelocity: 10
+  ProjectileCount: 1
+  ProjectileLifeTime: 2
+  Damage: 40
+  ReloadTime: 0.8
+  WeaponName: Revolver
+  WeaponSprite: {fileID: -1033009680, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
+  MaxAmmoCount: 60
+  AmmoInMagazine: 6
+  MagazineCount: 6
+  blockShoot: 0

@@ -17,6 +17,8 @@ public class Health : MonoBehaviour
     ParticleSystem deathParticles;
     SpriteRenderer spriteRenderer;
     Collider2D Collider;
+    Gun weapon;
+
     public GameObject AmmoCratePrefab;
 
 
@@ -30,6 +32,8 @@ public class Health : MonoBehaviour
         Collider = GetComponent<Collider2D>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         deathParticles = GetComponent<ParticleSystem>();
+        weapon = gameObject.GetComponentInChildren<Gun>();
+
     }
     public void TakeDamage(int damageIn)
     { 
@@ -42,8 +46,10 @@ public class Health : MonoBehaviour
 
     private void Die()
     {
+        weapon.enabled = false;
         Collider.enabled = false;
         spriteRenderer.enabled = false;
+
         deathParticles.Play();
         CalculateAmmoDrop(UnityEngine.Random.Range(0,5));
     }
@@ -67,7 +73,6 @@ public class Health : MonoBehaviour
     /// <returns></returns>
     IEnumerator WaitForParticlesThenDestroy(bool DropAmmo)
     {
-        
         if (DropAmmo && !gameObject.CompareTag("Player")) 
         { 
             Instantiate(AmmoCratePrefab,transform.position,transform.rotation);

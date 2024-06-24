@@ -1,13 +1,13 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
+using static WeaponScriptable; // dit is om de enum WeaponType te kunnen gebruiken
 
 public class Gun : MonoBehaviour
 {
     public Transform FirePoint;
     public WeaponScriptable[] weaponIn;
     public GameObject Projectile;
-    public Bullet[] Bullet;
-    private int currentBullet = 0;
     int CurrentWeapon = 0;
 
     private void Start()
@@ -20,30 +20,49 @@ public class Gun : MonoBehaviour
             weaponIn[i].AmmoInMagazine = weaponIn[i].MagazineCount;
             weaponIn[i].blockShoot = false;
         }
-        //GetComponent<SpriteRenderer>().sprite = weaponIn[CurrentWeapon].WeaponSprite;
+
+        if (gameObject.CompareTag("AI"))
+        {
+            StartCoroutine(AIShoot());
+        }
+
     }
+
+    IEnumerator AIShoot()
+    {
+        yield return new WaitForSeconds(weaponIn[CurrentWeapon].ReloadTime-Random.Range(0,0.5f));
+        Shoot();
+        StartCoroutine(AIShoot());
+    }
+
     void Update()
     {
-        CheckShoot();
-        ReadSwapInput();
-        CheckReload();
+        if (gameObject.CompareTag("Player"))
+        { 
+            CheckShoot();
+            ReadSwapInput();
+            CheckReload();
+        }
     }
     /// <summary>
     /// Wisselt naar het wapen op basis van de input
     /// </summary>
     void ReadSwapInput()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (gameObject.CompareTag("Player"))// swapt alleen de speler zijn wapen
         {
-            SwapWeapon(0);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            SwapWeapon(1);
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            SwapWeapon(2);
+           if (Input.GetKeyDown(KeyCode.Alpha1))
+           {
+               SwapWeapon(0);
+           }
+           if (Input.GetKeyDown(KeyCode.Alpha2))
+           {
+               SwapWeapon(1);
+           }
+           if (Input.GetKeyDown(KeyCode.Alpha3))
+           {
+               SwapWeapon(2);
+           }
         }
     }
     /// <summary>
@@ -52,20 +71,9 @@ public class Gun : MonoBehaviour
     /// <param name="weaponIn"></param>
     void SwapWeapon(int weaponIn)
     {
-            CurrentWeapon = weaponIn;
-            SetBullet(CurrentWeapon);
-            GetComponent<SpriteRenderer>().sprite = this.weaponIn[CurrentWeapon].WeaponSprite;
+        CurrentWeapon = weaponIn;
+        GetComponent<SpriteRenderer>().sprite = this.weaponIn[CurrentWeapon].WeaponSprite;
     }
-
-    /// <summary>
-    /// Wisselt De kogel die geschoten wordt, niet het wapen
-    /// </summary>
-    /// <param name="bulletIn"></param>
-    void SetBullet(int bulletIn)
-    {
-        currentBullet = bulletIn;
-    }
-
 
     /// <summary>
     /// Deelt de ammo count door ammoIn en voegt het resultaat toe aan het huidige wapen 
@@ -93,20 +101,19 @@ public class Gun : MonoBehaviour
     {
         weaponIn[currentWeapon].blockShoot = true;
         yield return new WaitForSeconds(weaponIn[currentWeapon].ReloadTime);
-        weaponIn[currentWeapon].blockShoot = false;
         weaponIn[currentWeapon].Reload();
+        weaponIn[currentWeapon].blockShoot = false;
         Debug.Log(weaponIn[currentWeapon]);
-        //StopCoroutine(ReloadRoutine(currentWeapon));
     }
     /// <summary>
-    /// Checkt of je kan schieten zo, ja Schiet, zo niet als alleen je magazijn leeg is reload, ammo count en magazijn is leeg, Return leeg wapen
+    /// Checkt of je kan schieten zo, ja Schiet, zo niet als alleen je magazijn leeg is reload, als ammo count en magazijn 0 zijn print "Empty Gun"
     /// </summary>
     void CheckShoot()
     {
         // als je meer dan 0 ammo hebt schiet een [ProjectileCount] aantal projectiles
         if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoInMagazine > 0)
         {
-            weaponIn[CurrentWeapon].Shoot(Projectile, FirePoint, Bullet[currentBullet].LifeTime,Bullet[currentBullet].Damage, weaponIn[CurrentWeapon].ProjectileCount);
+            Shoot();
         }
         // als je magazijn leeg is en je totale ammo 0 is dan gaat dit af
         else if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoCount < 1 && weaponIn[CurrentWeapon].AmmoInMagazine < 1)
@@ -129,6 +136,53 @@ public class Gun : MonoBehaviour
             else
             {
                 Debug.Log("InReload");
+            }
+        }
+    }
+
+
+
+    /// <summary>
+    /// Instantiate een kogel op de Gegeven Firepoint en set de LifeTime van de kogel
+    /// </summary>
+    /// <param name="Projectile"></param>
+    /// <param name="FirePoint"></param>
+    void Shoot()
+    {
+        if (!weaponIn[CurrentWeapon].blockShoot)
+        {
+            //pulse Pos wordt gebruikt om van zichzelf af te trekken om een alternerend shietpatroon te maken
+            float pulsePos = -0.2f;
+            for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
+            {
+                GameObject Projectile; 
+                // hij maakt elke keer een nieuwe projectile aan als er geschoten wordt en verwijderd daarna dit
+                // GameObject in plaats van de originele projectile
+                switch (weaponIn[CurrentWeapon].thisWeapon)
+                {
+                    case WeaponType.Shotgun:
+                        Projectile = Instantiate(this.Projectile, new Vector2(FirePoint.position.x + Random.Range(-0.3f, 0.3f), FirePoint.position.y + Random.Range(-0.5f, 0.8f)), FirePoint.rotation);
+                        break;
+
+                    case WeaponType.DB:
+                        Projectile = Instantiate(this.Projectile, new Vector2(FirePoint.position.x, FirePoint.position.y - pulsePos), FirePoint.rotation);
+                        pulsePos = -pulsePos;
+                        break;
+
+                    case WeaponType.Sniper:
+                        Projectile = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
+                        break;
+
+                    default:
+                        Projectile = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
+                        break;
+                }
+
+                weaponIn[CurrentWeapon].AmmoInMagazine--;
+                Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
+                rb.AddForce(Projectile.transform.forward * weaponIn[CurrentWeapon].ProjectileVelocity, ForceMode2D.Impulse);
+                Projectile.GetComponent<Projectile>().BulletLifeTime = weaponIn[CurrentWeapon].ProjectileLifeTime;
+                Projectile.GetComponent<Projectile>().Damage = weaponIn[CurrentWeapon].Damage;
             }
         }
     }

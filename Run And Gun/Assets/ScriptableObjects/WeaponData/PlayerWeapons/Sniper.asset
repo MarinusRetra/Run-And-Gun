@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  ammoCount: 16
+  ammoCount: 20
   thisWeapon: 3
   ProjectileVelocity: 30
   ProjectileCount: 1
+  ProjectileLifeTime: 3
+  Damage: 100
   ReloadTime: 1
   WeaponName: Sniper
   WeaponSprite: {fileID: -650543955, guid: 5076ee51c7008354583db321a008d8a2, type: 3}

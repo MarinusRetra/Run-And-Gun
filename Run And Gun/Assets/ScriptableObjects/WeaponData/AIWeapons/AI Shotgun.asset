@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
-  m_Name: Dubbel Barrel Shotgun
+  m_Name: AI Shotgun
   m_EditorClassIdentifier: 
-  ammoCount: 48
-  thisWeapon: 1
-  ProjectileVelocity: 10
-  ProjectileCount: 2
-  ReloadTime: 0.8
-  WeaponName: Revolver
-  WeaponSprite: {fileID: -1033009680, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
-  MaxAmmoCount: 60
-  AmmoInMagazine: 6
-  MagazineCount: 6
+  ammoCount: 99999999
+  thisWeapon: 2
+  ProjectileVelocity: 15
+  ProjectileCount: 3
+  ProjectileLifeTime: 3
+  Damage: 1
+  ReloadTime: 1
+  WeaponName: ShotgunAI
+  WeaponSprite: {fileID: -1893335615, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
+  MaxAmmoCount: 99999999
+  AmmoInMagazine: 99981
+  MagazineCount: 99999
   blockShoot: 0
