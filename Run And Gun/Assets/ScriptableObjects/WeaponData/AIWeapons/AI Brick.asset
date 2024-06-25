@@ -15,6 +15,7 @@ MonoBehaviour:
   ammoCount: 99999999
   thisWeapon: 0
   SpreadAngle: 0
+  GunSound: {fileID: 0}
   ProjectileVelocity: 5
   ProjectileCount: 1
   ProjectileLifeTime: 3
@@ -23,6 +24,6 @@ MonoBehaviour:
   WeaponName: Brick
   WeaponSprite: {fileID: 0}
   MaxAmmoCount: 99999999
-  AmmoInMagazine: 99994
+  AmmoInMagazine: 99966
   MagazineCount: 99999
   blockShoot: 0

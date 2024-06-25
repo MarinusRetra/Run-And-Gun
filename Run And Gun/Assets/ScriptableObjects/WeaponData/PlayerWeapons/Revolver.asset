@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoCount: 48
   thisWeapon: 0
+  SpreadAngle: 0
+  GunSound: {fileID: 8300000, guid: cfd37e25962c74f42b015f94b0873f58, type: 3}
   ProjectileVelocity: 10
   ProjectileCount: 1
   ProjectileLifeTime: 2

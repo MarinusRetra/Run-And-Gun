@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Linq;
 using UnityEngine;
 using static WeaponScriptable; // dit is om de enum WeaponType te kunnen gebruiken
 
@@ -74,6 +73,10 @@ public class Gun : MonoBehaviour
     /// <param name="weaponIn"></param>
     void SwapWeapon(int weaponIn)
     {
+        if (this.weaponIn[CurrentWeapon].thisWeapon == WeaponType.Pulse)
+        { 
+            this.weaponIn[CurrentWeapon].blockShoot = false;
+        }
         CurrentWeapon = weaponIn;
         GetComponent<SpriteRenderer>().sprite = this.weaponIn[CurrentWeapon].WeaponSprite;
     }
@@ -159,6 +162,7 @@ public class Gun : MonoBehaviour
             /*Zorgt dat je niet kan schieten terwijl geschoten wordt */  weaponIn[CurrentWeapon].blockShoot = true; 
             for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
             {
+                AudioScript.PlaySoundEffect(weaponIn[CurrentWeapon].GunSound);
                 GameObject[] Projectile = new GameObject[weaponIn[CurrentWeapon].ProjectileCount];
 
                 //Berekent de spread van elke projectile als de spread angle 0 verandert er niks aan het schieten

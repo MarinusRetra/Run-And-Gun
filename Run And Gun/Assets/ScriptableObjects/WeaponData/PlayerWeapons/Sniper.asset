@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
   m_Name: Sniper
   m_EditorClassIdentifier: 
-  ammoCount: 20
+  ammoCount: 19
   thisWeapon: 3
+  SpreadAngle: 0
+  GunSound: {fileID: 8300000, guid: cfd37e25962c74f42b015f94b0873f58, type: 3}
   ProjectileVelocity: 30
   ProjectileCount: 1
   ProjectileLifeTime: 3

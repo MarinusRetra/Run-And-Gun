@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6acec45553056b24f829d1a4946f1007, type: 3}
   m_Name: Pulse
   m_EditorClassIdentifier: 
-  ammoCount: 52
+  ammoCount: 19
   thisWeapon: 1
   SpreadAngle: 0.1
+  GunSound: {fileID: 8300000, guid: cfd37e25962c74f42b015f94b0873f58, type: 3}
   ProjectileVelocity: 30
   ProjectileCount: 4
   ProjectileLifeTime: 4

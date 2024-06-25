@@ -7,6 +7,7 @@ public class WeaponScriptable : ScriptableObject
     public enum WeaponType  { None, Pulse, Shotgun, Sniper}
     public WeaponType thisWeapon;
     public float SpreadAngle;
+    public AudioClip GunSound;
     public int ProjectileVelocity;
     public int ProjectileCount;
     public float ProjectileLifeTime;

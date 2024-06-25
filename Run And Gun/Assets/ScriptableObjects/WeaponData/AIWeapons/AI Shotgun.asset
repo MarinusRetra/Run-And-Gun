@@ -15,6 +15,7 @@ MonoBehaviour:
   ammoCount: 99999999
   thisWeapon: 2
   SpreadAngle: 15
+  GunSound: {fileID: 8300000, guid: cfd37e25962c74f42b015f94b0873f58, type: 3}
   ProjectileVelocity: 6
   ProjectileCount: 3
   ProjectileLifeTime: 3
@@ -23,6 +24,6 @@ MonoBehaviour:
   WeaponName: ShotgunAI
   WeaponSprite: {fileID: -1893335615, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
   MaxAmmoCount: 99999999
-  AmmoInMagazine: 99966
+  AmmoInMagazine: 99987
   MagazineCount: 99999
   blockShoot: 0

@@ -7,6 +7,7 @@ public class Health : MonoBehaviour
     [SerializeField] int hp;
     public int maxHealth;
     bool iFrames = false;
+    public AudioClip DeathSound;
     public int HP 
     { 
         get { return hp; }
@@ -59,6 +60,8 @@ public class Health : MonoBehaviour
     private void Die()
     {
         weapon.StopAllCoroutines();
+        AudioScript.PlaySoundEffect(DeathSound);
+
         if (gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
