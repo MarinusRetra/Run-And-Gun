@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -56,6 +57,10 @@ public class Health : MonoBehaviour
     private void Die()
     {
         weapon.StopAllCoroutines();
+        if (gameObject.CompareTag("Player"))
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
         weaponSpriteRenderer.enabled = false;
         weapon.enabled = false;
         Collider.enabled = false;
