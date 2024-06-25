@@ -292,6 +292,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   AmmoCratePrefab: {fileID: 5480786706324713070, guid: 93472483923031541b513b8d23a398c8, type: 3}
+  HealtCratePrefab: {fileID: 5480786706324713070, guid: 802140d3ac8b2cf4ca3ef1e9a956f13f, type: 3}
 --- !u!114 &8064441206470042808
 MonoBehaviour:
   m_ObjectHideFlags: 0

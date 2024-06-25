@@ -166,6 +166,7 @@ public class Gun : MonoBehaviour
 
                 Vector2 direction = Quaternion.Euler(0, 0, angleOffset) * FirePoint.forward;
 
+
                 switch (weaponIn[CurrentWeapon].thisWeapon)
                 {
                     case WeaponType.Shotgun:
@@ -183,6 +184,10 @@ public class Gun : MonoBehaviour
                         break;
 
                     case WeaponType.Sniper:
+                        if (gameObject.CompareTag("AI"))
+                        {
+                           direction = Quaternion.Euler(0, 0, angleOffset) * -FirePoint.right;
+                        }
                         Projectile[i] = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
                         break;
 

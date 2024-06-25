@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    int hp;
+    [SerializeField] int hp;
     public int maxHealth;
     bool iFrames = false;
     public int HP 
@@ -12,7 +12,7 @@ public class Health : MonoBehaviour
         get { return hp; }
         set {
          hp = value < 0 ? 0 : value; //hp kan niet lager dan 0
-         //hp = value > maxHealth ? maxHealth : value; //hp kan niet hoger dan maxHealth
+         hp = value > maxHealth ? maxHealth : value; //hp kan niet hoger dan maxHealth
         }
     }
 
@@ -23,10 +23,12 @@ public class Health : MonoBehaviour
     SpriteRenderer weaponSpriteRenderer;
 
     public GameObject AmmoCratePrefab;
+    public GameObject HealtCratePrefab;
 
 
     private void Awake()
     {
+       
        hp = maxHealth;
     }
 
@@ -43,7 +45,7 @@ public class Health : MonoBehaviour
         if (!iFrames)
         {
             HP -= damageIn;
-            if (HP == 0)
+            if (HP <= 0)
             {
                 Die();
             }
@@ -76,8 +78,12 @@ public class Health : MonoBehaviour
         {
             StartCoroutine(WaitForParticlesThenDestroy(true));
         }
-        else 
-        { 
+        if (kans == 2)
+        {
+            Instantiate(HealtCratePrefab, transform.position, transform.rotation);
+        }
+        else if (kans < 2)
+        {
             StartCoroutine(WaitForParticlesThenDestroy(false));
         }
     }
