@@ -8,11 +8,11 @@ public class Projectile : MonoBehaviour
     public GameObject Particles;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
         try
         {
             collision.gameObject.GetComponent<Health>().TakeDamage(Damage);
         }   catch { }
+        Destroy(gameObject);
     }
     private void Start()
     {

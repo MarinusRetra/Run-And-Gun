@@ -4,8 +4,9 @@ using UnityEngine;
 public class WeaponScriptable : ScriptableObject
 {
     [SerializeField] int ammoCount;
-    public enum WeaponType  { None, DB, Shotgun, Sniper}
+    public enum WeaponType  { None, Pulse, Shotgun, Sniper}
     public WeaponType thisWeapon;
+    public float SpreadAngle;
     public int ProjectileVelocity;
     public int ProjectileCount;
     public float ProjectileLifeTime;

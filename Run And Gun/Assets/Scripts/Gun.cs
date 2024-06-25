@@ -43,7 +43,7 @@ public class Gun : MonoBehaviour
     IEnumerator AIShoot()
     {
         yield return new WaitForSeconds(weaponIn[CurrentWeapon].ReloadTime-Random.Range(0,0.5f));
-        Shoot();
+        StartCoroutine(Shoot());
         StartCoroutine(AIShoot());
     }
 
@@ -116,7 +116,7 @@ public class Gun : MonoBehaviour
         // als je meer dan 0 ammo hebt schiet een [ProjectileCount] aantal projectiles
         if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoInMagazine > 0)
         {
-            Shoot();
+            StartCoroutine(Shoot());
         }
         // als je magazijn leeg is en je totale ammo 0 is dan gaat dit af
         else if (Input.GetMouseButtonDown(0) && weaponIn[CurrentWeapon].AmmoCount < 1 && weaponIn[CurrentWeapon].AmmoInMagazine < 1)
@@ -145,48 +145,59 @@ public class Gun : MonoBehaviour
 
 
 
+
     /// <summary>
     /// Instantiate een kogel op de Gegeven Firepoint en set de LifeTime van de kogel
     /// </summary>
     /// <param name="Projectile"></param>
     /// <param name="FirePoint"></param>
-    void Shoot()
+    IEnumerator Shoot()
     {
         if (!weaponIn[CurrentWeapon].blockShoot)
         {
-            //pulse Pos wordt gebruikt om van zichzelf af te trekken om een alternerend shietpatroon te maken
-            float pulsePos = -0.2f;
+            float pulsePos = 0.2f;
+            /*Zorgt dat je niet kan schieten terwijl geschoten wordt */  weaponIn[CurrentWeapon].blockShoot = true; 
             for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
             {
-                GameObject Projectile; 
-                // hij maakt elke keer een nieuwe projectile aan als er geschoten wordt en verwijderd daarna dit
-                // GameObject in plaats van de originele projectile
+                GameObject[] Projectile = new GameObject[weaponIn[CurrentWeapon].ProjectileCount];
+
+                //Berekent de spread van elke projectile als de spread angle 0 verandert er niks aan het schieten
+                float angleOffset = (i - (weaponIn[CurrentWeapon].ProjectileCount - 2) / 1.0f) * weaponIn[CurrentWeapon].SpreadAngle;
+
+                Vector2 direction = Quaternion.Euler(0, 0, angleOffset) * FirePoint.forward;
+
                 switch (weaponIn[CurrentWeapon].thisWeapon)
                 {
                     case WeaponType.Shotgun:
-                        Projectile = Instantiate(this.Projectile, new Vector2(FirePoint.position.x + Random.Range(-0.3f, 0.3f), FirePoint.position.y + Random.Range(-0.5f, 0.8f)), FirePoint.rotation);
+                        if (gameObject.CompareTag("AI"))
+                        { direction = Quaternion.Euler(0, 0, angleOffset) * FirePoint.up; }
+                        Projectile[i] = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
+
                         break;
 
-                    case WeaponType.DB:
-                        Projectile = Instantiate(this.Projectile, new Vector2(FirePoint.position.x, FirePoint.position.y - pulsePos), FirePoint.rotation);
+                    case WeaponType.Pulse:
+                        yield return new WaitForSeconds(0.05f);
+                        Projectile[i] = Instantiate(this.Projectile, new Vector2(FirePoint.position.x, FirePoint.position.y - pulsePos), FirePoint.rotation);
                         pulsePos = -pulsePos;
+
                         break;
 
                     case WeaponType.Sniper:
-                        Projectile = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
+                        Projectile[i] = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
                         break;
 
                     default:
-                        Projectile = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
+                        Projectile[i] = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
                         break;
                 }
-
                 weaponIn[CurrentWeapon].AmmoInMagazine--;
-                Rigidbody2D rb = Projectile.GetComponent<Rigidbody2D>();
-                rb.AddForce(Projectile.transform.forward * weaponIn[CurrentWeapon].ProjectileVelocity, ForceMode2D.Impulse);
-                Projectile.GetComponent<Projectile>().BulletLifeTime = weaponIn[CurrentWeapon].ProjectileLifeTime;
-                Projectile.GetComponent<Projectile>().Damage = weaponIn[CurrentWeapon].Damage;
+                Rigidbody2D rb = Projectile[i].GetComponent<Rigidbody2D>();
+                rb.AddForce(direction * weaponIn[CurrentWeapon].ProjectileVelocity, ForceMode2D.Impulse);
+                Projectile[i].GetComponent<Projectile>().BulletLifeTime = weaponIn[CurrentWeapon].ProjectileLifeTime;
+                Projectile[i].GetComponent<Projectile>().Damage = weaponIn[CurrentWeapon].Damage;
             }
+            weaponIn[CurrentWeapon].blockShoot = false;
         }
     }
+
 }

@@ -5,6 +5,7 @@ public class Health : MonoBehaviour
 {
     int hp;
     public int maxHealth;
+    bool iFrames = false;
     public int HP 
     { 
         get { return hp; }
@@ -18,6 +19,7 @@ public class Health : MonoBehaviour
     SpriteRenderer spriteRenderer;
     Collider2D Collider;
     Gun weapon;
+    SpriteRenderer weaponSpriteRenderer;
 
     public GameObject AmmoCratePrefab;
 
@@ -33,25 +35,34 @@ public class Health : MonoBehaviour
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         deathParticles = GetComponent<ParticleSystem>();
         weapon = gameObject.GetComponentInChildren<Gun>();
+        weaponSpriteRenderer = weapon.GetComponent<SpriteRenderer>();
     }
     public void TakeDamage(int damageIn)
-    { 
-        HP -= damageIn;
-        if (HP == 0)
+    {
+        if (!iFrames)
         {
-            Die();
+            HP -= damageIn;
+            if (HP == 0)
+            {
+                Die();
+            }
+            if (gameObject.CompareTag("Player"))
+            { 
+                StartCoroutine(PlayerDamaged());
+            }
         }
     }
 
     private void Die()
     {
         weapon.StopAllCoroutines();
+        weaponSpriteRenderer.enabled = false;
         weapon.enabled = false;
         Collider.enabled = false;
         spriteRenderer.enabled = false;
 
         deathParticles.Play();
-        CalculateAmmoDrop(UnityEngine.Random.Range(0,5));
+        CalculateAmmoDrop(Random.Range(0,5));
     }
 
     private void CalculateAmmoDrop(int kans)
@@ -79,5 +90,19 @@ public class Health : MonoBehaviour
         }
         yield return new WaitForSeconds(deathParticles.main.duration);
         Destroy(gameObject);
+    }
+
+
+    IEnumerator PlayerDamaged()
+    {
+        iFrames = true;
+        for (int i = 0; i < 4; i++)
+        {
+           spriteRenderer.enabled = false;
+           yield return new WaitForSeconds(0.1f);
+           spriteRenderer.enabled = true;
+           yield return new WaitForSeconds(0.1f);
+        }
+        iFrames = false;
     }
 }

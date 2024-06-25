@@ -6,7 +6,7 @@ public class LookAtCursor: MonoBehaviour
     private void Start()
     {
         //set de texture van de muis naar de crossair texture
-        Cursor.SetCursor(CrossAir, Vector2.zero, CursorMode.Auto);
+        Cursor.SetCursor(CrossAir, new Vector2(30,30), CursorMode.Auto);
     }
 
 

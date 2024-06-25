@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammoCount: 99999999
   thisWeapon: 0
+  SpreadAngle: 0
   ProjectileVelocity: 5
   ProjectileCount: 1
   ProjectileLifeTime: 3
@@ -22,6 +23,6 @@ MonoBehaviour:
   WeaponName: Brick
   WeaponSprite: {fileID: 0}
   MaxAmmoCount: 99999999
-  AmmoInMagazine: 99995
+  AmmoInMagazine: 99994
   MagazineCount: 99999
   blockShoot: 0
