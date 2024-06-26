@@ -111,6 +111,7 @@ public class Gun : MonoBehaviour
         weaponIn[currentWeapon].blockShoot = false;
         Debug.Log(weaponIn[currentWeapon]);
     }
+
     /// <summary>
     /// Checkt of je kan schieten zo, ja Schiet, zo niet als alleen je magazijn leeg is reload, als ammo count en magazijn 0 zijn print "Empty Gun"
     /// </summary>
@@ -128,9 +129,9 @@ public class Gun : MonoBehaviour
         }
     }
 
-     /// <summary>
-     /// Reload Wapen als je geen ammo hebt en blokkeerd de inputs van nog een reload terwijl de coroutine bezig is 
-     /// </summary>
+    /// <summary>
+    /// Reload Wapen als je geen ammo hebt en blokkeerd de inputs van nog een reload terwijl de coroutine bezig is 
+    /// </summary>
     void CheckReload()
     {
         if (Input.GetKeyDown(KeyCode.R) || weaponIn[CurrentWeapon].AmmoInMagazine < 1 && weaponIn[CurrentWeapon].AmmoCount > 0)
@@ -147,22 +148,22 @@ public class Gun : MonoBehaviour
     }
 
 
-
-
     /// <summary>
     /// Instantiate een kogel op de Gegeven Firepoint en set de LifeTime van de kogel
     /// </summary>
-    /// <param name="Projectile"></param>
-    /// <param name="FirePoint"></param>
     IEnumerator Shoot()
     {
         if (!weaponIn[CurrentWeapon].blockShoot)
         {
             float pulsePos = 0.2f;
-            /*Zorgt dat je niet kan schieten terwijl geschoten wordt */  weaponIn[CurrentWeapon].blockShoot = true; 
+            /*Zorgt dat je niet kan schieten terwijl er al geschoten wordt */  weaponIn[CurrentWeapon].blockShoot = true; 
             for (int i = 0; i < weaponIn[CurrentWeapon].ProjectileCount; i++)
             {
-                AudioScript.PlaySoundEffect(weaponIn[CurrentWeapon].GunSound);
+                try
+                {
+                    AudioScript.PlaySoundEffect(weaponIn[CurrentWeapon].GunSound);
+                }
+                catch { }
                 GameObject[] Projectile = new GameObject[weaponIn[CurrentWeapon].ProjectileCount];
 
                 //Berekent de spread van elke projectile als de spread angle 0 verandert er niks aan het schieten
@@ -170,21 +171,18 @@ public class Gun : MonoBehaviour
 
                 Vector2 direction = Quaternion.Euler(0, 0, angleOffset) * FirePoint.forward;
 
-
                 switch (weaponIn[CurrentWeapon].thisWeapon)
                 {
                     case WeaponType.Shotgun:
                         if (gameObject.CompareTag("AI"))
                         { direction = Quaternion.Euler(0, 0, angleOffset) * FirePoint.up; }
                         Projectile[i] = Instantiate(this.Projectile, FirePoint.position, FirePoint.rotation);
-
                         break;
 
                     case WeaponType.Pulse:
                         yield return new WaitForSeconds(0.05f);
                         Projectile[i] = Instantiate(this.Projectile, new Vector2(FirePoint.position.x, FirePoint.position.y - pulsePos), FirePoint.rotation);
                         pulsePos = -pulsePos;
-
                         break;
 
                     case WeaponType.Sniper:
