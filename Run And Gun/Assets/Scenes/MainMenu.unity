@@ -2901,6 +2901,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 115005761107862238, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2222880544772355490, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865504638325625900, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4100295372222091961, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.131
@@ -2949,6 +2961,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4291286236602378158, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4568688928882428095, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
       propertyPath: Projectile
       value: 
@@ -2982,6 +2998,14 @@ PrefabInstance:
       value: FirePoint Middle
       objectReference: {fileID: 0}
     - target: {fileID: 6848495204582306498, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848495204582306498, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: maxHealth
+      value: 36003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6848495204582306498, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
       propertyPath: DeathSound
       value: 
       objectReference: {fileID: 8300000, guid: ff3f807947257384895bd4c95c235b66, type: 3}
@@ -2995,7 +3019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7305236822808597063, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8318236033402372472, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
       propertyPath: m_GravityScale

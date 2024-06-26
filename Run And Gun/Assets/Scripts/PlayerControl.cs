@@ -17,6 +17,7 @@ public class PlayerControl : MonoBehaviour
         //link en rechts movement
         rb.velocity = new Vector2(Controller.ReturnMovementInput() * Controller.MoveSpeed, rb.velocity.y);
         
+
         //kan alleen springen als je op de grond staat
         if (JumpBuffer > 0 && IsGrounded)
         {
@@ -38,9 +39,14 @@ public class PlayerControl : MonoBehaviour
         { 
             JumpBuffer -= Time.deltaTime;
         }
-        
-         TurnToCursor();
+        TurnToCursor();
     }
+    void Jump()
+    {
+        IsGrounded = false;
+        rb.velocity = new Vector2(rb.velocity.x, Controller.JumpForce);
+    }
+
     /// <summary>
     /// Zorgt dat de speler altijd de kant van de cursor op kijkt
     /// </summary>
@@ -80,9 +86,4 @@ public class PlayerControl : MonoBehaviour
         }
     }
 
-    void Jump()
-    {
-        IsGrounded = false;
-        rb.velocity = new Vector2(rb.velocity.x, Controller.JumpForce);
-    }
 }

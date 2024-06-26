@@ -211,5 +211,4 @@ public class Gun : MonoBehaviour
             weaponIn[CurrentWeapon].blockShoot = false;
         }
     }
-
 }
