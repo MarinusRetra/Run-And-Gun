@@ -5,6 +5,9 @@ public class CameraFollow : MonoBehaviour
     public GameObject Target;
     void Update()
     {
-         transform.position = new Vector3(Target.transform.position.x, Target.transform.position.y , -10);
+        if (Target.transform.position.y > -6)
+        { 
+         transform.position = new Vector3(Target.transform.position.x, Target.transform.position.y+2 , -10);
+        }
     }
 }

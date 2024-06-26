@@ -22,10 +22,14 @@ public class AIMovement : MonoBehaviour
 
     private void Update()
     {
-        Controller.ReturnMovementInput(MovePoints, transform.position, SwapPoint);
+           //Controller.ReturnMovementInput(MovePoints, transform.position, SwapPoint);
 
            //Zet de velocity op basis van waar de volgende movePoint is
-           MovementInfo = Controller.ReturnMovementInput(MovePoints, transform.position, SwapPoint);
+           try
+           {
+               MovementInfo = Controller.ReturnMovementInput(MovePoints, transform.position, SwapPoint);
+           }
+           catch { }
 
            rb.velocity = new Vector2(MovementInfo.Key * Controller.MoveSpeed, rb.velocity.y);
            SwapPoint = MovementInfo.Value;

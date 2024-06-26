@@ -20,10 +20,10 @@ MonoBehaviour:
   ProjectileCount: 1
   ProjectileLifeTime: 3
   Damage: 1
-  ReloadTime: 3
+  ReloadTime: 2
   WeaponName: SniperAI
   WeaponSprite: {fileID: 1737869065, guid: 5076ee51c7008354583db321a008d8a2, type: 3}
   MaxAmmoCount: 99999999
-  AmmoInMagazine: 99995
+  AmmoInMagazine: 99966
   MagazineCount: 99999
   blockShoot: 0

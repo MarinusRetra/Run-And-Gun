@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b95467ee05267d40bf6a0496f3111eb, type: 3}
   m_Name: PlayerController
   m_EditorClassIdentifier: 
-  JumpForce: 10
-  MoveSpeed: 5
+  JumpForce: 11
+  MoveSpeed: 6

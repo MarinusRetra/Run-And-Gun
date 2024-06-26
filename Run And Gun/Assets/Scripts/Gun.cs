@@ -8,9 +8,11 @@ public class Gun : MonoBehaviour
     public WeaponScriptable[] weaponIn;
     public GameObject Projectile;
     int CurrentWeapon = 0;
+    GameObject player;
 
     private void Start()
     {
+        player  = GameObject.Find("Player");
         //zet de AmmoCount naar MaxAmmoCount van het i en doet hetzelfde met AmmoInMagazine
         weaponIn[CurrentWeapon].blockShoot = false;
         for (int i = 0; i < weaponIn.Length; i++)
@@ -22,7 +24,7 @@ public class Gun : MonoBehaviour
 
         if (gameObject.CompareTag("AI"))
         {
-            StartCoroutine(AIShoot());
+                StartCoroutine(AIShoot());
         }
     }
     void Update()
@@ -42,7 +44,10 @@ public class Gun : MonoBehaviour
     IEnumerator AIShoot()
     {
         yield return new WaitForSeconds(weaponIn[CurrentWeapon].ReloadTime-Random.Range(0,0.5f));
-        StartCoroutine(Shoot());
+        if (Vector3.Distance(transform.position, player.transform.position) < 20)
+        { 
+            StartCoroutine(Shoot());
+        }
         StartCoroutine(AIShoot());
     }
 

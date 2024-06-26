@@ -390,5 +390,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cfc9d69286bb36448e7d830a09e4fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 0
   maxHealth: 3
+  DeathSound: {fileID: 8300000, guid: ff3f807947257384895bd4c95c235b66, type: 3}
   AmmoCratePrefab: {fileID: 0}
+  HealtCratePrefab: {fileID: 0}
