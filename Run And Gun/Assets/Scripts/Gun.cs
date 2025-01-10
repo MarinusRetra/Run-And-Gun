@@ -2,6 +2,8 @@ using System.Collections;
 using UnityEngine;
 using static WeaponScriptable; // dit is om de enum WeaponType te kunnen gebruiken
 
+//TODO haal de schiet en kogel logic uit dit script en zet de logic in een virtual functie van het wapen zelf.
+
 public class Gun : MonoBehaviour
 {
     public Transform FirePoint;

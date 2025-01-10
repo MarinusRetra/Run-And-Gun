@@ -11,16 +11,15 @@ public class AmmoCrate : MonoBehaviour
     {
         Ammo = Random.Range(0,4);
         spriteRenderer = GetComponent<SpriteRenderer>();
-
         spriteRenderer.sprite = possibleSprites[Ammo];
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (trigger.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponentInChildren<Gun>().AddAmmo(Ammo+2);
+            trigger.gameObject.GetComponentInChildren<Gun>().AddAmmo(Ammo+2);
             // Hier doe ik +2 om ammo te kunnen gebruiken hoe ik wil zonder dat ik de logic voor 
-            // de crate sprite hoef te veranderen.
+            // Ammo is het nummer wat op de crate staat wat laat zien hoeveel ammo er in de crate zit.
             Destroy(gameObject);
         }
     }

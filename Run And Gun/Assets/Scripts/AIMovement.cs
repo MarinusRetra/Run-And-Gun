@@ -2,7 +2,7 @@ using UnityEngine;
 using System;
 using System.Collections.Generic;
 
-
+//TODO laat dit werken zonder jump points en swap points
 public class AIMovement : MonoBehaviour
 {
     public AiController Controller;

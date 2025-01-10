@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-    [CreateAssetMenu(fileName = "AIController", menuName = "inputController/AIController")]
+    [CreateAssetMenu(fileName = "AIController", menuName = "Controller/AIController")]
+
+    //TODO laat dit werken zonder jump points en swap points
     public class AiController : ScriptableObject
     {
         public float JumpForce;
@@ -21,7 +23,6 @@ using UnityEngine;
             var nextJumpPoint = ReturnClosestJumpPoint(jumpPointsIn, AIPos);
             if (Vector2.Distance(AIPos, nextJumpPoint.transform.position) < nextMovePointDistance)
             {
-               Debug.Log("jump");
                JumpForce = nextJumpPoint.GetComponent<JumPower>().JumpPower;
                return true;
             }
@@ -30,18 +31,18 @@ using UnityEngine;
 
         public KeyValuePair<float,bool> ReturnMovementInput(GameObject[] movePointsIn, Vector2 AIPos, bool swapPointIn)
         {
-        // zet de currentMovePoint op 0 of 1 op basis van SwapPoint
+            //Zet de currentMovePoint op 0 of 1 op basis van SwapPoint
             currentMovePoint = Convert.ToInt32(swapPointIn);
 
             float currentMovePointX = movePointsIn[currentMovePoint].transform.position.x;
 
-            //toggled swapPoint elke keer wanneer de AI in nextMovePointDistance is
+            //Toggled swapPoint elke keer wanneer de AI in nextMovePointDistance is
             if (Vector2.Distance(AIPos, movePointsIn[currentMovePoint].transform.position) < nextMovePointDistance)
             {
                 swapPointIn = !swapPointIn;
             }
 
-            //return 1 of -1 op basis van de x coordinaat van currentMovePoint
+            //Return 1 of -1 op basis van de x coordinaat van currentMovePoint
             if (currentMovePointX < AIPos.x)
             {
                 return new(-1,swapPointIn);

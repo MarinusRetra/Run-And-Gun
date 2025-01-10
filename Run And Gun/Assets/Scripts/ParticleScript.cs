@@ -5,10 +5,10 @@ public class ParticleScript : MonoBehaviour
 {
     void Start()
     {
-        StartCoroutine(WaitForParticle());
+        StartCoroutine(DestoryParticle());
     }
 
-    IEnumerator WaitForParticle()
+    IEnumerator DestoryParticle()
     {
        yield return new WaitForSeconds(gameObject.GetComponent<ParticleSystem>().main.duration+0.5f);
        Destroy(gameObject);

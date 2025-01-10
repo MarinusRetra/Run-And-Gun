@@ -235,6 +235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyerAI (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
       value: 135.0778
@@ -28426,7 +28430,7 @@ Transform:
   m_GameObject: {fileID: 226889168}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.970001, y: 9.029579, z: 0.025873361}
+  m_LocalPosition: {x: -29.754356, y: 9.029579, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28454,6 +28458,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -28512,6 +28520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyerAI
       objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.397802
@@ -28565,6 +28577,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901397549}
     m_Modifications:
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 80.280075
@@ -28625,6 +28641,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6168187372914425066, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: targetObject
@@ -29079,6 +29099,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901397549}
     m_Modifications:
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -29159,6 +29183,10 @@ PrefabInstance:
     - target: {fileID: 3399926734174073509, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_Name
       value: FlyerAI (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29348,7 +29376,7 @@ Transform:
   m_GameObject: {fileID: 525254761}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.970001, y: 10.42958, z: 0.025873361}
+  m_LocalPosition: {x: -29.754356, y: 10.42958, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29546,6 +29574,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Static Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6168187372914425066, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: targetObject
       value: 
@@ -29625,6 +29657,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29814,7 +29850,7 @@ Transform:
   m_GameObject: {fileID: 738556452}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.95, y: 1.3795797, z: 0.025873361}
+  m_LocalPosition: {x: -29.734356, y: 1.3795797, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29841,6 +29877,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30082,7 +30122,7 @@ Transform:
   m_GameObject: {fileID: 830116622}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.970001, y: 11.959579, z: 0.025873361}
+  m_LocalPosition: {x: -29.754356, y: 11.959579, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30099,6 +30139,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30169,6 +30213,10 @@ PrefabInstance:
     - target: {fileID: 3399926734174073509, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_Name
       value: FlyerAI (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30358,7 +30406,7 @@ Transform:
   m_GameObject: {fileID: 888080787}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.970001, y: 4.4995794, z: 0.025873361}
+  m_LocalPosition: {x: -29.754356, y: 4.4995794, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30437,6 +30485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Static Enemy (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
       value: 167.73917
@@ -30493,6 +30545,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6168187372914425066, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: targetObject
@@ -30554,6 +30610,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30675,6 +30735,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901397549}
     m_Modifications:
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 125.61627
@@ -30769,6 +30833,10 @@ PrefabInstance:
     - target: {fileID: 3399926734174073509, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_Name
       value: FlyerAI (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30884,6 +30952,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901397549}
     m_Modifications:
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -31165,6 +31237,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901397549}
     m_Modifications:
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -31374,7 +31450,7 @@ Transform:
   m_GameObject: {fileID: 1240540643}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.955647, y: -0.140409, z: 0.025873361}
+  m_LocalPosition: {x: -29.74, y: -0.140409, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31518,7 +31594,7 @@ Transform:
   m_GameObject: {fileID: 1242743839}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.975645, y: 6.01958, z: 0.025873361}
+  m_LocalPosition: {x: -29.76, y: 6.01958, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31754,6 +31830,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyerAI (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
       value: 123.567795
@@ -31807,6 +31887,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901397549}
     m_Modifications:
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.268328
@@ -31887,6 +31971,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32087,7 +32175,7 @@ Transform:
   m_GameObject: {fileID: 1374163523}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.970001, y: 7.5395684, z: 0.025873361}
+  m_LocalPosition: {x: -29.754356, y: 7.5395684, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32168,6 +32256,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901397549}
     m_Modifications:
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 130.75426
@@ -32386,6 +32478,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyerAI (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
       value: 140.0778
@@ -32569,7 +32665,7 @@ Transform:
   m_GameObject: {fileID: 1573636847}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -24.975645, y: 2.979591, z: 0.025873361}
+  m_LocalPosition: {x: -29.76, y: 2.979591, z: 0.025873361}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -32657,6 +32753,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyerAI (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
       value: 131.2078
@@ -32718,6 +32818,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32781,6 +32885,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FlyerAI (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7637478769871802615, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_LocalPosition.x
       value: 19.187801
@@ -32837,6 +32945,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192007439275615139, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32953,6 +33065,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1901397549}
     m_Modifications:
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 85.41933
@@ -33499,6 +33615,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5469225778863682019, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: DeathSound
       value: 
@@ -33609,6 +33729,10 @@ PrefabInstance:
     - target: {fileID: 4614369890950693096, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: m_Name
       value: Static Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872544715756763697, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6168187372914425066, guid: 4558c0ce701645447b38ca86a7420608, type: 3}
       propertyPath: targetObject
@@ -33994,6 +34118,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2222880544772355490, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4100295372222091961, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.131
@@ -34090,6 +34218,78 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: jumpRef
+      value: 
+      objectReference: {fileID: 3486658200125470473, guid: c7d29ad0a3240214391d08a15187e002, type: 3}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: JumpForce
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: MoveSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: jumpForce
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: moveSpeed
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: moveLookRef
+      value: 
+      objectReference: {fileID: -6832488008105255714, guid: c7d29ad0a3240214391d08a15187e002, type: 3}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Id
+      value: 1d90e717-f712-435a-9564-9580812c276d
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Name
+      value: Player Input
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Actions.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Bindings.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Actions.Array.data[0].m_Id
+      value: a45fd88c-d71c-4b5b-8002-40c4bddbef93
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Bindings.Array.data[0].m_Id
+      value: 6f7bfcdf-1d9d-4997-818c-53e3d06421be
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Actions.Array.data[0].m_Name
+      value: New action
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Actions.Array.data[0].m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Bindings.Array.data[0].m_Action
+      value: New action
+      objectReference: {fileID: 0}
+    - target: {fileID: 7804946613406212314, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: playerInput.m_Actions.Array.data[0].m_ExpectedControlType
+      value: Button
+      objectReference: {fileID: 0}
+    - target: {fileID: 8318236033402372472, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8318236033402372472, guid: fd6e16da7cbb7de408bb4a055784eaa4, type: 3}
       propertyPath: m_GravityScale
       value: 2
@@ -34119,6 +34319,10 @@ PrefabInstance:
       propertyPath: DeathSound
       value: 
       objectReference: {fileID: 8300000, guid: ff3f807947257384895bd4c95c235b66, type: 3}
+    - target: {fileID: 5549370051729676240, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6139976042797209319, guid: dc4dca26e704e7c429e600a460e973f6, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.032198
@@ -34223,6 +34427,10 @@ PrefabInstance:
     - target: {fileID: 3399926734174073509, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145395956363273127, guid: 7799cb56c45002244a22bfed17448334, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5469225778863682019, guid: 7799cb56c45002244a22bfed17448334, type: 3}
       propertyPath: DeathSound

@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class HealtCrate : MonoBehaviour
 {
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D trigger)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (trigger.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Health>().HP++;
+            trigger.gameObject.GetComponent<Health>().HP++;
             Destroy(gameObject);
         }
     }

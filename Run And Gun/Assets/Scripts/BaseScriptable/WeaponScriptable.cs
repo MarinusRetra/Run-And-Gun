@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//TODO Haal ammo uit het scriptable object
+
 [CreateAssetMenu(fileName = "Weapon", menuName = "Weapons/Weapon")]
 public class WeaponScriptable : ScriptableObject
 {
